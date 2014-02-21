@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:body>
+     	<ui:composition template="/templates/insert-user.xhtml">
+     		<ui:define name="mainBody">
+	     		<h:form>					
+					<div class="wizardDiv">
+ 						<h:outputText value="#{lang_msg['label.email']}" styleClass="textLabel" />
+						<h:inputText id="email" styleClass="text" value="#{insertUser.user.email}" size="20" required="true" label="Email Address" requiredMessage="#{msg['msg.error.validator.requiredEmail']}">
+							<f:validator validatorId="com.placeMe.validator.EmailValidator" />
+						</h:inputText>
+						<h:messages globalOnly="true" />
+						<ul><li><h:message for="email" /></li></ul>
+					</div>
+					<div id="wizardButtonRight">
+						<p class="button-style"><h:commandLink action="#{insertUser.checkUser}" value="#{lang_msg['wizard.button.next']}" /></p>
+					</div>
+				</h:form>	
+     		</ui:define>
+    	</ui:composition>
+    </h:body>
+</html>

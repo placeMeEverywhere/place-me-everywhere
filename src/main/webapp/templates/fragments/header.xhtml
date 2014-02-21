@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://java.sun.com/jsf/html"  
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+	<f:view locale="#{language.locale}">
+		<f:loadBundle basename="com.placeMe.messages.Language" var="lang_msg"/>      
+	    <body>
+		    <ui:composition>
+			    <div id="header">
+					<div id="language">
+		               	<h:form id="langauge_form">
+		                	<h:commandLink action="#{language.changeLanguage}" title="Italiano" >
+		                		<h:graphicImage name="italian.png" library="images" />
+		                		<f:param name="lang" value="it" />
+		                	</h:commandLink> |
+		                  	<h:commandLink action="#{language.changeLanguage}" title="English">
+		                  		<h:graphicImage name="english.png" library="images" />
+		                  		<f:param name="lang" value="en" />
+		                  	</h:commandLink>	
+		               	</h:form>		
+					</div>		    
+					<div id="logo">
+						<h1><a href="#"><h:outputText value="#{lang_msg['main.label.title']}" /></a></h1>
+					</div>
+					<div id="menu">
+						<ul>
+							<li class="current_page_item"><a href="/index.xhtml" accesskey="1" title="">#{lang_msg['menu.1']}</a></li>
+							<li><a href="#" accesskey="3" title="">#{lang_msg['menu.2']}</a></li>
+						</ul>
+					</div>
+					<h:form>
+						<div id="login">
+							<h:outputText value="#{lang_msg['label.username']}" styleClass="textLabel"/>
+							<h:inputText id="username" value="#{auth.username}" styleClass="text"  />
+							<h:outputText value="#{lang_msg['label.password']}" styleClass="textLabel" />
+							<h:inputSecret id="password" value="#{auth.password}" styleClass="text" /> 
+							<p class="button-style">
+								<h:commandLink action="#{auth.login}" value="#{lang_msg['label.signIn']}" />
+							</p>
+						</div>
+					</h:form>
+				</div>
+	 	    </ui:composition>
+	    </body>
+    </f:view>
+</html>

@@ -1,0 +1,12 @@
+##############################
+## Eclipse files
+
+.settings/
+.classpath
+.project
+
+
+##############################
+## Compiled
+
+target/

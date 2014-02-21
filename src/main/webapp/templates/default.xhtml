@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="#{language.language}" xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+ 	<f:view locale="#{language.locale}">
+ 		<f:loadBundle basename="com.placeMe.messages.Language" var="lang_msg"/>
+	    <h:head>
+	    	<title><h:outputText value="#{lang_msg['main.label.title']}" /></title>
+	    	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
+			<link href="http://fonts.googleapis.com/css?family=Abel|Satisfy" rel="stylesheet" type="text/css" />
+			<script type='text/javascript' src='/placeMe/jq/jquery-1.8.1.min.js' />
+			<script type='text/javascript' src='/placeMe/jq/jquery.form.js' />
+			<h:outputStylesheet name="default.css" library="css" />
+			<h:outputStylesheet name="wizard.css" library="css" />
+			<h:outputScript name="placeMe.js" library="js" />
+			<script type='text/javascript' src='/placeMe/dwr/engine.js'></script>
+			<script type='text/javascript' src='/placeMe/dwr/interface/GeolocationAjax.js'></script>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    </h:head>
+	 
+	    <h:body onload="javascript: getLocation();"> 
+			<div id="header-wrapper">
+				<ui:insert name="header" >
+				  <ui:include src="fragments/header.xhtml" />
+				</ui:insert>
+		    </div>
+		 
+		    <div id="page-wrapper">
+		    	<div id="page">
+				  	<ui:insert name="categories" >
+				 	  	<ui:include src="fragments/categories.xhtml" />
+				   	</ui:insert>
+				   	<ui:insert name="mainBody" >
+				   		<ui:include src="fragments/main.xhtml" />
+				   	</ui:insert>
+			   	</div>
+		    </div>
+		 
+		    <div id="footer">
+		    	<ui:insert name="footer" >
+		    	  <ui:include src="fragments/footer.xhtml" />
+		    	</ui:insert>
+	    	</div>
+	    	
+	    	<div id="demo">
+	    	</div>
+	    </h:body>
+    </f:view>
+</html>

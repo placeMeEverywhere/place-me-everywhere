@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:t="http://myfaces.apache.org/tomahawk"
+      >
+    <h:body>
+     	<ui:composition template="/templates/insert-user.xhtml">
+     		<ui:define name="mainBody">
+	     		<h:form enctype="multipart/form-data">					
+					<div style="height: 250px; width: 60%">
+						<div style="padding-bottom: 10px;">
+							<h:outputText value="#{lang_msg['label.name']}" styleClass="textLabel" />
+							<span style="float: right">
+								<h:inputText id="name" styleClass="text" value="#{insertUser.profile.firstName}" size="20" required="true" label="#{lang_msg['label.name']}" />
+							</span>
+							<div class="clearfix"/>
+						</div>
+						
+						<div style="padding-bottom: 10px;">
+							<h:outputText value="#{lang_msg['label.surname']}" styleClass="textLabel" />
+							<span style="float: right">
+								<h:inputText id="surname" styleClass="text" value="#{insertUser.profile.lastName}" size="20" required="true" label="#{lang_msg['label.surname']}" />
+							</span>
+							<div class="clearfix"/>
+						</div>
+						
+						<div style="padding-bottom: 10px;">
+							<h:outputText value="#{lang_msg['label.localization']}" styleClass="textLabel" />
+							<span style="float: right; margin-right: 15px">
+								<strong><h:outputText value="#{insertUser.currentLocation.locationName} (#{insertUser.currentLocation.area.areaName}) [#{insertUser.currentLocation.area.country.countryName}]" styleClass="textLabelWizard" /></strong>								
+							</span>
+							<div class="clearfix"/>
+						</div>
+						
+						<div style="padding-bottom: 10px;">
+							<h:outputText value="#{lang_msg['label.avatar']}" styleClass="textLabel" /><div id="avatarBtn" style="height: 200px; width: 150px;border: 1px dashed #BBB; cursor:pointer; float:right; margin-right: 15px" onclick="getFile()"></div>
+							<div style='height: 0px;width:0px; overflow:hidden;'><t:inputFileUpload id="avatar" styleClass="file" value="#{insertUser.avatar}" /></div>
+							<div id="results"></div>
+							<div class="clearfix"/>
+						</div>
+						<div class="clearfix"/>
+					</div>
+					<div class="clearfix"/>
+					<div id="wizardButtonLeft">
+						<p class="button-style"><h:commandLink action="#{insertUser.goToStartWizard}" value="#{lang_msg['wizard.button.back']}" /></p>
+					</div>
+					
+					<div id="wizardButtonRight">
+						<p class="button-style"><h:commandLink action="#{insertUser.goToAddInfo}" value="#{lang_msg['wizard.button.next']}" /></p>
+					</div>					
+				</h:form>	
+     		</ui:define>
+     	</ui:composition>
+    </h:body>
+</html>

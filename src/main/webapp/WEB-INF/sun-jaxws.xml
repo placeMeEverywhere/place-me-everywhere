@@ -1,0 +1,12 @@
+<endpoints  
+    xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime'  
+    version='2.0'>  
+    <endpoint
+        name='RegisterUser'  
+        implementation='com.placeMe.ws.user.services.PlaceMeWSRegisterUser'  
+        url-pattern='/services/RegisterUser' />
+    <endpoint
+        name='UpdateUser'  
+        implementation='com.placeMe.ws.user.services.PlaceMeWSUpdateUser'  
+        url-pattern='/services/UpdateUser' />
+</endpoints> 
