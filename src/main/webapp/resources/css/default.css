@@ -71,7 +71,7 @@ hr {
 }
 
 .container {
-	width: 1000px;
+	width: 100%;
 	margin: 0px auto;
 }
 
@@ -94,7 +94,7 @@ hr {
 }
 
 #header {
-	width: 80%;
+	/*width: 80%;*/
 	height: 100%;
 	margin: 0 auto;
 	padding: 0px 0px;
@@ -168,12 +168,12 @@ hr {
 #page-wrapper {
 	overflow: hidden;
 	background: #000000;
-	height: 60%;
+	height: 70%;
 }
 
 #page {
 	overflow: hidden;
-	width: 80%;
+	/*width: 80%;*/
 	margin: 0px auto;
 	color: #8F8F8F;
 }
@@ -278,7 +278,7 @@ input.file {
 }
 
 #left h2 {
-	padding: 0px 0px 30px 0px;
+	padding: 0px 0px 30px 5px;
 	letter-spacing: -1px;
 	font-size: 2em;
 	color: #C04000;
@@ -295,7 +295,7 @@ input.file {
 
 #footer {
 	/*height: 100px;*/
-	height: 15%;
+	height: 5%;
 	margin: 0 auto;
 	padding: 50px 0px 15px 0px;
 	font-family: 'Abel', sans-serif;

@@ -7,6 +7,142 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>placeMe-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
+	<!-- Profiles configuration -->
+	<profiles>
+	    <profile>
+	        <id>dev-home</id>
+	        <!-- Dev profile is active by default -->
+	        <activation>
+	            <activeByDefault>true</activeByDefault>
+	        </activation>
+	        <properties>
+	            <!--
+	               Specifies the build profile id, which is used to find out the correct properties file.
+	               This is not actually necessary for this example, but it can be used for other purposes.
+	           -->
+	            <build.profile.id>dev-home</build.profile.id>
+	        </properties>
+	        <build>
+	            <filters>
+	                <!--
+	                   Specifies path to the properties file, which contains profile specific
+	                   configuration. In this case, the configuration file is searched
+	                   from profiles/dev/ directory.
+	               -->
+	                <filter>profiles/${build.profile.id}/env.properties</filter>
+	            </filters>
+	            <resources>
+	                <!--
+	                   Placeholders found from files located in the configured resource directories are replaced
+	                   with values found from the profile specific configuration files.
+	               -->
+	                <resource>
+	                    <filtering>true</filtering>
+	                    <directory>src/main/resources</directory>
+	                    <!--
+	                       You can also include only specific files found from the configured directory or
+	                       exclude files. This can be done by uncommenting following sections and adding
+	                       the configuration under includes and excludes tags.
+	                   -->
+	                    <!--
+	                   <includes>
+	                       <include></include>
+	                   </includes>
+	                   <excludes>
+	                       <exclude></exclude>
+	                   </excludes>
+	                   -->
+	                </resource>
+	            </resources>
+	        </build>
+	    </profile>
+	    <profile>
+	        <id>openshift</id>
+	        <properties>
+	            <!--
+	               Specifies the build profile id, which is used to find out the correct properties file.
+	               This is not actually necessary for this example, but it can be used for other purposes.
+	           -->
+	            <build.profile.id>openshift</build.profile.id>
+	        </properties>
+	        <build>
+	            <filters>
+	                <!--
+	                   Specifies path to the properties file, which contains profile specific
+	                   configuration. In this case, the configuration file is searched
+	                   from profiles/test/ directory.
+	               -->
+	                <filter>profiles/${build.profile.id}/env.properties</filter>
+	            </filters>
+	            <resources>
+	                <!--
+	                   Placeholders found from files located in the configured resource directories are replaced
+	                   with values found from the profile specific configuration files.
+	               -->
+	                <resource>
+	                    <filtering>true</filtering>
+	                    <directory>src/main/resources</directory>
+	                    <!--
+	                       You can also include only specific files found from the configured directory or
+	                       exclude files. This can be done by uncommenting following sections and adding
+	                       the configuration under includes and excludes tags.
+	                   -->
+	                    <!--
+	                   <includes>
+	                       <include></include>
+	                   </includes>
+	                   <excludes>
+	                       <exclude></exclude>
+	                   </excludes>
+	                   -->
+	                </resource>
+	            </resources>
+	        </build>
+	    </profile>
+	    <profile>
+	        <id>dev-office</id>
+	        <properties>
+	            <!--
+	               Specifies the build profile id, which is used to find out the correct properties file.
+	               This is not actually necessary for this example, but it can be used for other purposes.
+	           -->
+	            <build.profile.id>dev-office</build.profile.id>
+	        </properties>
+	        <build>
+	            <filters>
+	                <!--
+	                   Specifies path to the properties file, which contains profile
+	                   specific configuration. In this case, the configuration file is searched
+	                   from profiles/prod/ directory.
+	               -->
+	                <filter>profiles/${build.profile.id}/env.properties</filter>
+	            </filters>
+	            <resources>
+	                <!--
+	                   Placeholders found from files located in the configured resource directories are replaced
+	                   with values found from the profile specific configuration files.
+	               -->
+	                <resource>
+	                    <filtering>true</filtering>
+	                    <directory>src/main/resources</directory>
+	                    <!--
+	                       You can also include only specific files found from the configured directory or
+	                       exclude files. This can be done by uncommenting following sections and adding
+	                       the configuration under includes and excludes tags.
+	                   -->
+	                    <!--
+	                   <includes>
+	                       <include></include>
+	                   </includes>
+	                   <excludes>
+	                       <exclude></exclude>
+	                   </excludes>
+	                   -->
+	                </resource>
+	            </resources>
+	        </build>
+	    </profile>
+	</profiles>  
   <dependencies>
 	<dependency>
 		<groupId>net.sf.json-lib</groupId>

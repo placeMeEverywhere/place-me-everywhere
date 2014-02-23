@@ -2,7 +2,7 @@
 <Context antiJARLocking="true" path="/placeMe">
   <Resource name="jdbc/placeMe" auth="Container" type="javax.sql.DataSource"
                maxActive="50" maxIdle="30" maxWait="10000"
-               username="adminlvFlk7l" password="7-1aVyFZxuYh" 
+               username="${jdbc.mysql.user}" password="${jdbc.mysql.pass}" 
                driverClassName="com.mysql.jdbc.Driver"
-               url="jdbc:mysql://127.9.151.130:3306/placeme"/>
+               url="jdbc:mysql://${jdbc.mysql.host}:${jdbc.mysql.port}/placeme"/>
 </Context>
