@@ -8,19 +8,22 @@
     <h:body>
      	<ui:composition template="/templates/insert-user.xhtml">
      		<ui:define name="mainBody">
-	     		<h:form>					
-					<div style="height: 250px">
-						Confirm
-						&nbsp;
-					</div>
-					<div id="wizardButtonLeft">
-						<p class="button-style"><h:commandLink action="#{insertUser.goToAddInfo}" value="#{lang_msg['wizard.button.back']}" /></p>
-					</div>
-					
-					<div id="wizardButtonRight">
-						<p class="button-style"><h:commandLink action="#{insertUser.goToThankYou}" value="#{lang_msg['wizard.button.next']}" /></p>
-					</div>					
-				</h:form>	
+     			<div id="right">
+		     		<h:form>					
+						<div style="height: 250px">
+							Confirm
+							&nbsp;
+						</div>
+						<div id="wizardButtonLeft">
+							<p class="button-style"><h:commandLink action="#{insertUser.goToAddInfo}" value="#{lang_msg['wizard.button.back']}" /></p>
+						</div>
+						
+						<div id="wizardButtonRight">
+							<p class="button-style"><h:commandLink action="#{insertUser.goToThankYou}" value="#{lang_msg['wizard.button.next']}" /></p>
+						</div>					
+					</h:form>	
+					<div class="clearfix"></div>
+				</div>
      		</ui:define>
     	</ui:composition>
     </h:body>
