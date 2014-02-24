@@ -8,8 +8,7 @@
     <h:body>
      	<ui:composition template="/templates/insert-user.xhtml">
      		<ui:define name="mainBody">
-     			<div id="right">
-		     		<h:form>					
+     		 		<h:form>					
 						<div style="height: 250px">
 							Confirm
 							&nbsp;
@@ -21,9 +20,7 @@
 						<div id="wizardButtonRight">
 							<p class="button-style"><h:commandLink action="#{insertUser.goToThankYou}" value="#{lang_msg['wizard.button.next']}" /></p>
 						</div>					
-					</h:form>	
-					<div class="clearfix"></div>
-				</div>
+					</h:form>				
      		</ui:define>
     	</ui:composition>
     </h:body>

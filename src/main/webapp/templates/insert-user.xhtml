@@ -11,31 +11,19 @@
 	    	<title><h:outputText value="#{lang_msg['main.label.title']}" /></title>
 	    	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
 			<link href="http://fonts.googleapis.com/css?family=Abel|Satisfy" rel="stylesheet" type="text/css" />
+			<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />			
 			<script type='text/javascript' src='/placeMe/jq/jquery-1.8.1.min.js' />
 			<script type='text/javascript' src='/placeMe/jq/jquery.form.js' />
+			<script type='text/javascript' src='/placeMe/jq/jquery-ui.js' />
 			<h:outputStylesheet name="default.css" library="css" />
 			<h:outputStylesheet name="wizard.css" library="css" />
-			<h:outputScript name="placeMe.js" library="js" />
-			<script type='text/javascript'>
-			$(document).ready(function(){  
-				$('form').ajaxForm({
-					beforeSubmit: function() {
-						$('#results').html('Submitting...');
-					},
-					success: function(data) {
-						var $out = $('#results');
-						$out.html('Your results:');
-						$out.append('<div><pre>'+ data +'</pre></div>');
-					}
-				});
-			})
-			</script>
 			<script type='text/javascript' src='/placeMe/dwr/engine.js'></script>
 			<script type='text/javascript' src='/placeMe/dwr/interface/GeolocationAjax.js'></script>
+			<h:outputScript name="placeMe.js" library="js" />
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	    </h:head>
 	 
-	    <h:body onload="javascript: getLocation();"> 
+	    <h:body onload="javascript: avatarReload();"> 
 			<div id="header-wrapper">
 				<ui:insert name="header" >
 				  <ui:include src="fragments/header.xhtml" />
@@ -47,16 +35,19 @@
 				  	<ui:insert name="categories" >
 				 	  	<ui:include src="fragments/categories.xhtml" />
 				   	</ui:insert>
-				   	<div id="content">
-						<div>
-							<ui:insert name="wizardMenu" >
-						   		<ui:include src="fragments/insert-user/wizard-menu.xhtml" />
-						   	</ui:insert>											   	
-						   	<ui:insert name="mainBody" >
-						   		<ui:include src="fragments/main.xhtml" />
-						   	</ui:insert>
-					   	</div>
-					</div>   	
+				   	<div id="right">
+					   	<div id="content">
+							<div>
+								<ui:insert name="wizardMenu" >
+							   		<ui:include src="fragments/insert-user/wizard-menu.xhtml" />
+							   	</ui:insert>											   	
+							   	<ui:insert name="mainBody" >
+							   		<ui:include src="fragments/main.xhtml" />
+							   	</ui:insert>
+						   	</div>
+						</div>
+						<div class="clearfix"></div>   	
+					</div>
 			   	</div>
 		    </div>
 		 

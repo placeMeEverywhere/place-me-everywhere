@@ -11,17 +11,20 @@
 	    	<title><h:outputText value="#{lang_msg['main.label.title']}" /></title>
 	    	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
 			<link href="http://fonts.googleapis.com/css?family=Abel|Satisfy" rel="stylesheet" type="text/css" />
+			<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
 			<script type='text/javascript' src='/placeMe/jq/jquery-1.8.1.min.js' />
 			<script type='text/javascript' src='/placeMe/jq/jquery.form.js' />
+			<script type='text/javascript' src='/placeMe/jq/jquery-ui.js' />
 			<h:outputStylesheet name="default.css" library="css" />
 			<h:outputStylesheet name="wizard.css" library="css" />
+			
 			<h:outputScript name="placeMe.js" library="js" />
 			<script type='text/javascript' src='/placeMe/dwr/engine.js'></script>
 			<script type='text/javascript' src='/placeMe/dwr/interface/GeolocationAjax.js'></script>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	    </h:head>
 	 
-	    <h:body onload="javascript: getLocation();"> 
+	    <h:body onload="javascript: avatarReset();"> 
 			<div id="header-wrapper">
 				<ui:insert name="header" >
 				  <ui:include src="fragments/header.xhtml" />

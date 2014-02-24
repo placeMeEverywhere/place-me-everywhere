@@ -35,5 +35,11 @@ public class QueryBuilder {
 
 	public static final String LOCATION_INSERT					=	"INSERT INTO location " +
 																	"VALUES(:id, :locationName, :idArea)";
+	
+	
+	public static final String ALL_LOCATIONS					=	"SELECT l.location_name, a.area_name, c.country_name " +
+																	"FROM location l, administrative_area_level_1 a, country c " +
+																	"WHERE l.id_area = a.id " +
+																	"AND a.id_country = c.id";
 
 }

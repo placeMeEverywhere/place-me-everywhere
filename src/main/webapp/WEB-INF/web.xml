@@ -67,7 +67,7 @@
 	            Set the path where the intermediary files will be stored.
 	        </description>
 	        <param-name>uploadRepositoryPath</param-name>
-	        <param-value>/home/graziano/Desktop/avatars/temp-upload</param-value>
+	        <param-value>avatars/temp-upload</param-value>
 	    </init-param>
     </filter>  	  		  
   	<servlet-mapping>

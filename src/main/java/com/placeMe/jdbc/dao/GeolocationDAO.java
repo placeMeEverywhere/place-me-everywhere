@@ -1,6 +1,8 @@
 package com.placeMe.jdbc.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.placeMe.jdbc.entity.AdministrativeAreaLevel1;
@@ -17,6 +19,7 @@ import static com.placeMe.jdbc.util.QueryBuilder.LOCATION_INSERT;
 import static com.placeMe.jdbc.util.QueryBuilder.COUNTRY_CHECK;
 import static com.placeMe.jdbc.util.QueryBuilder.AREA_CHECK;
 import static com.placeMe.jdbc.util.QueryBuilder.LOCATION_CHECK;
+import static com.placeMe.jdbc.util.QueryBuilder.ALL_LOCATIONS;
 
 public class GeolocationDAO extends PlaceMeDAO {
 
@@ -47,7 +50,23 @@ public class GeolocationDAO extends PlaceMeDAO {
 		}else
 			System.out.println("Location already exists");
 	}
-
+	
+	public List<String> getAllLocations() {
+		List<String> result = new ArrayList<String>();
+		List<Map<String, Object>> res = jdbcTemplate.queryForList(ALL_LOCATIONS);
+		for(Map<String, Object> single : res){
+			StringBuilder sb = new StringBuilder();
+			sb.append((String)single.get("location_name"));
+			sb.append(" (");
+			sb.append((String)single.get("area_name"));
+			sb.append(") [");
+			sb.append((String)single.get("country_name"));
+			sb.append("]");
+			result.add(sb.toString());
+		}
+		return result;
+	}
+	
 	/**
 	 * Inserisce una nuova Nazione (country).
 	 * 

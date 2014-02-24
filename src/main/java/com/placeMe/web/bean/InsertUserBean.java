@@ -28,6 +28,7 @@ public class InsertUserBean extends AbstractWizardBean implements Serializable {
 	private Profile profile;
 	private UploadedFile avatar;
 	private Location currentLocation;
+	private String alternativeLocation;
 	
 	@PostConstruct
 	public void init(){
@@ -73,5 +74,11 @@ public class InsertUserBean extends AbstractWizardBean implements Serializable {
 	}
 	public void setCurrentLocation(Location currentLocation) {
 		this.currentLocation = currentLocation;
+	}
+	public String getAlternativeLocation() {
+		return alternativeLocation;
+	}
+	public void setAlternativeLocation(String alternativeLocation) {
+		this.alternativeLocation = alternativeLocation;
 	}
 }

@@ -12,9 +12,7 @@
 	    <profile>
 	        <id>dev-home</id>
 	        <!-- Dev profile is active by default -->
-	        <activation>
-	            <activeByDefault>true</activeByDefault>
-	        </activation>
+	        
 	        <properties>
 	            <!--
 	               Specifies the build profile id, which is used to find out the correct properties file.
@@ -55,6 +53,9 @@
 	    </profile>
 	    <profile>
 	        <id>dev-office</id>
+	        <activation>
+	            <activeByDefault>true</activeByDefault>
+	        </activation>
 	        <properties>
 	            <!--
 	               Specifies the build profile id, which is used to find out the correct properties file.

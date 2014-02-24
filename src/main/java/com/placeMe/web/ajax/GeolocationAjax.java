@@ -2,10 +2,13 @@ package com.placeMe.web.ajax;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.apache.commons.io.IOUtils;
 import org.directwebremoting.WebContext;
@@ -25,7 +28,7 @@ import static com.placeMe.util.PlaceMeConstants.LOCATION_PARAM;
 
 public class GeolocationAjax {
 	
-	public void retrieveGeolocation(double latitude, double longitude, String language) throws MalformedURLException, IOException{
+	public void retrieveGeolocation(double latitude, double longitude, String language) throws MalformedURLException, IOException {
 		WebContext ctx = WebContextFactory.get();
 		HttpSession session = ctx.getSession();
 		String city = null;
@@ -59,6 +62,17 @@ public class GeolocationAjax {
 	   		geoService.serve();
 	   		session.setAttribute(LOCATION_PARAM, locationBean);
 		}
+	}
+	
+	public List<String> manualGeolocation() throws IOException {
+//		WebContext ctx = WebContextFactory.get();
+//		HttpServletResponse response = ctx.getHttpServletResponse();
+		GeolocationService geoService = SpringContext.INSTANCE.getBean("geolocationService", GeolocationService.class);
+//		PrintWriter out = response.getWriter();
+		JSONArray json_array = (JSONArray) JSONSerializer.toJSON(geoService.getGeoDAO().getAllLocations());
+		JSONObject json = json_array.toJSONObject(json_array);
+//		out.write(json.toString());
+		return geoService.getGeoDAO().getAllLocations();
 	}
 	
 	private Location retrieveLocation(String _country, String _area, String _location) {

@@ -22,5 +22,8 @@ public class GeolocationService extends PlaceMeService {
 	public void setGeoDAO(GeolocationDAO geoDAO) {
 		this.geoDAO = geoDAO;
 	}
-
+	
+	public GeolocationDAO getGeoDAO() {
+		return geoDAO;
+	}
 }

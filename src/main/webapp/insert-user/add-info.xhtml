@@ -8,11 +8,11 @@
     <h:body>
      	<ui:composition template="/templates/insert-user.xhtml">
      		<ui:define name="mainBody">
-     			<div id="right">
 		     		<h:form>					
 						<div style="height: 250px">
 							Add Info
 							&nbsp;
+							<h:outputText value="#{insertUser.avatar.name}" />
 						</div>
 						<div id="wizardButtonLeft">
 							<p class="button-style"><h:commandLink action="#{insertUser.goToProfile}" value="#{lang_msg['wizard.button.back']}" /></p>
@@ -22,8 +22,6 @@
 							<p class="button-style"><h:commandLink action="#{insertUser.goToConfirm}" value="#{lang_msg['wizard.button.next']}" /></p>
 						</div>					
 					</h:form>	
-					<div class="clearfix"></div>
-				</div>
      		</ui:define>
     	</ui:composition>
     </h:body>
