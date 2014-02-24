@@ -4,7 +4,7 @@
   <groupId>com.placeMe</groupId>
   <artifactId>placeMe-web</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>placeMe-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
 	<!-- Profiles configuration -->
@@ -153,7 +153,27 @@
 		<groupId>org.apache.myfaces.tomahawk</groupId>
 		<artifactId>tomahawk</artifactId>
 		<version>1.1.8</version>
-	</dependency>				
+	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>	
+	<dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.1</version>
+        </dependency>
+        <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>1.6.1</version>
+        </dependency>
+        <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.6.1</version>
+        </dependency>					
   </dependencies>
   <build>
     <finalName>placeMe</finalName>

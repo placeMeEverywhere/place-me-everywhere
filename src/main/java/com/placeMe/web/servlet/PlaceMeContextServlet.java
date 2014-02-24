@@ -6,18 +6,27 @@ import java.net.PasswordAuthentication;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+
 import com.placeMe.PlaceMeContext;
 
 public class PlaceMeContextServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -6713077215221273401L;
 	
+	private Logger logger = Logger.getLogger(this.getClass());
+	
 	@Override
 	public void init() throws ServletException {
+//		DOMConfigurator.configure("log4j.xml");
 		// inizializzazione spring context
 		try {
+			logger.info("***************************************************************************");
+			logger.info("Startup PlaceMe context...");
 			PlaceMeContext.INSTANCE.init();
 			checkProxy();
+			logger.info("...context initialized!");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

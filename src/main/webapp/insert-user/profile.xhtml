@@ -29,17 +29,19 @@
 							</div>
 							
 							<div style="padding-bottom: 10px;">
-								<h:outputText value="#{lang_msg['label.localization']}" styleClass="textLabel" />
-								<span style="float: right; margin-right: 15px">
+								<h:outputText value="#{lang_msg['label.localization']}" styleClass="textLabel" />								
 									<c:choose>
-									<c:when test="#{not empty insertUser.currentLocation.locationName and not empty insertUser.currentLocation.area.areaName and not empty insertUser.currentLocation.area.country.countryName}">
-										<strong><h:outputText value="#{insertUser.currentLocation.locationName} (#{insertUser.currentLocation.area.areaName}) [#{insertUser.currentLocation.area.country.countryName}]" styleClass="textLabelWizard" /></strong>
-									</c:when>
+										<span style="float: right; margin-right: 15px">
+											<c:when test="#{not empty insertUser.currentLocation.locationName and not empty insertUser.currentLocation.area.areaName and not empty insertUser.currentLocation.area.country.countryName}">
+												<strong><h:outputText value="#{insertUser.currentLocation.locationName} (#{insertUser.currentLocation.area.areaName}) [#{insertUser.currentLocation.area.country.countryName}]" styleClass="textLabelWizard" /></strong>
+											</c:when>
+										</span>
 									<c:otherwise>
-										<input type="text" id="location" class="text" size="50" label="#{lang_msg['label.localization']}" />
+										<span style="float: right">
+											<input type="text" id="location" name="manual_location" value="#{insertUser.alternativeLocation}" class="text" size="20" label="#{lang_msg['label.localization']}" />
+										</span>
 									</c:otherwise>
-									</c:choose>								
-								</span>
+									</c:choose>
 								<div class="clearfix"/>
 							</div>
 							

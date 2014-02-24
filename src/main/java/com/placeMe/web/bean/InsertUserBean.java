@@ -35,6 +35,8 @@ public class InsertUserBean extends AbstractWizardBean implements Serializable {
 		super.init();
 		user = new User();
 		profile = new Profile();
+		currentLocation = new Location();
+		alternativeLocation = "";
 	}
 	
 	public String checkUser() {
@@ -51,6 +53,15 @@ public class InsertUserBean extends AbstractWizardBean implements Serializable {
 		return goToProfile();
 	}
 
+	public String goToAddInfo(){
+		// Memorizzo nella variabile locale il valore, eventualmente inserito, della manual geolocation
+		String manual_location = FacesContext.getCurrentInstance().
+				getExternalContext().getRequestParameterMap().get("manual_location");
+		if(null!=manual_location)
+			setAlternativeLocation(manual_location);
+		return super.goToAddInfo();
+	}
+	
 	public User getUser() {
 		return user;
 	}

@@ -61,7 +61,8 @@ $(function() {
     $('#location').keyup(function() { 
         GeolocationAjax.manualGeolocation(function(str){
            $('#location').autocomplete({
-        	   source: str
+        	   source: str,
+        	   minLenght: 1
            });
         });
     });
