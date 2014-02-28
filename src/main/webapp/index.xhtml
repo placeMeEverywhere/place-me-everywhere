@@ -6,6 +6,15 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       >
     <h:body onload="javascript: getLocation();">
+    	<style type="text/css">
+			.dlg-no-close .ui-dialog-titlebar-close {
+				display: none;
+			}
+			.dlg-no-title .ui-dialog-titlebar {
+				display: none;
+			}
+		</style>
+		 
      	<ui:composition template="/templates/default.xhtml">
      		<ui:define name="mainBody">
      			<div id="right">
@@ -16,11 +25,49 @@
 								<p>This is <strong>GoodLife </strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org">FCT</a>.   The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :) </p>
 								<p> </p>
 								<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. </p>
-								<p class="button-style"><h:commandLink value="#{lang_msg['label.signUp']}" action="#{insertUser.startWizard}" /></p>
+								<p class="button-style">
+									<h:commandLink value="#{lang_msg['label.signUp']}" action="#{insertUser.startWizard}" />
+								</p>
+								&nbsp;&nbsp;&nbsp;&nbsp;#{lang_msg['label.or']} &nbsp;&nbsp;&nbsp;&nbsp;
+								<p class="button-style">
+									<a id="button" style="cursor: pointer">#{lang_msg['label.login']}</a>
+									<div id="dialog" title="#{lang_msg['label.login']}">
+										<h:form>
+											<div id="login">
+												<h:outputText value="#{lang_msg['label.username']}" styleClass="textLabel"/>
+												<h:inputText id="username" value="#{auth.username}" styleClass="text"  />
+												<h:outputText value="#{lang_msg['label.password']}" styleClass="textLabel" />
+												<h:inputSecret id="password" value="#{auth.password}" styleClass="text" /> 
+												<p class="button-style">
+													<h:commandLink action="#{auth.login}" value="#{lang_msg['label.signIn']}" />
+												</p>
+											</div>
+										</h:form>
+										<div class="clearfix"></div>    
+									</div>								
+									<script type="text/javascript">
+										$(function() {
+											$("#dialog").dialog({
+												autoOpen: false,
+												modal: true,
+												show: {effect: "fade", duration: 2000}, 
+												hide: {effect: "explode", duration: 1000},
+												width: 400,
+												dialogClass: "dlg-no-close"
+											});
+											$("#button").on("click", function() {
+												$("#dialog").dialog("open");
+											});				
+										});
+									</script>   
+								</p>
 							</div>
 						</div>
 					</h:form>	
-					<div class="clearfix"></div>    
+					
+					
+					<div class="clearfix"></div>
+					
 				</div> 		
      		</ui:define>
     	</ui:composition>

@@ -30,18 +30,7 @@
 							<li class="current_page_item"><a href="#{request.contextPath}/index.xhtml" accesskey="1" title="">#{lang_msg['menu.1']}</a></li>
 							<li><a href="#" accesskey="3" title="">#{lang_msg['menu.2']}</a></li>
 						</ul>
-					</div>
-					<h:form>
-						<div id="login">
-							<h:outputText value="#{lang_msg['label.username']}" styleClass="textLabel"/>
-							<h:inputText id="username" value="#{auth.username}" styleClass="text"  />
-							<h:outputText value="#{lang_msg['label.password']}" styleClass="textLabel" />
-							<h:inputSecret id="password" value="#{auth.password}" styleClass="text" /> 
-							<p class="button-style">
-								<h:commandLink action="#{auth.login}" value="#{lang_msg['label.signIn']}" />
-							</p>
-						</div>
-					</h:form>
+					</div>					
 				</div>
 	 	    </ui:composition>
 	    </body>

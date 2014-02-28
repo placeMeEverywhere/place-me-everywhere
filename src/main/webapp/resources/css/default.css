@@ -8,7 +8,7 @@ body {
 	padding: 0;
 	background: #1B2024;
 	font-family: 'Abel', sans-serif;
-	font-size: 15px;
+	font-size: 1em;
 	color: #8F8F8F;
 	height: 100%;
 	width: 100%;
@@ -23,8 +23,8 @@ h1, h2, h3 {
 }
 
 p, ol, ul {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 p, ol {
@@ -58,7 +58,7 @@ img.alignright {
 }
 
 img.aligncenter {
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 hr {
@@ -72,7 +72,7 @@ hr {
 
 .container {
 	width: 100%;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 .clearfix {
@@ -83,8 +83,7 @@ hr {
 
 #header-wrapper {
 	overflow: hidden;
-	/*height: 230px;*/
-	height: 25%;
+	height: 157px;
 	/*IE*/
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5F5F5F', endColorstr='#000000');
 	/*Browser WEBKIT */
@@ -95,27 +94,28 @@ hr {
 
 #header {
 	/*width: 80%;*/
-	height: 100%;
+	height: 140px;
 	margin: 0 auto;
-	padding: 0 5% 0 5%;
+	width: 1000px;	
+	padding: 0px;
 }
 
 /* Logo */
 
 #logo {
 	float: left;
-	width: 350px;
+	width: 300px;
 	height: 80px;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 
 #logo h1 {
-	padding: 30px 0px 0px 0px;
+	padding-top: 2em;
 	background: url(images/img02.png) no-repeat left 50%;
-	letter-spacing: -2px;
-	font-size: 3em;
+	/*letter-spacing: -2px;*/
+	font-size: 1em;
 }
 
 #logo h1 a {
@@ -127,32 +127,32 @@ hr {
 
 #menu {
 	float: right;
-	width: 600px;
-	height: 80px;
+	width: 650px;
+	height: 85px;
 }
 
 #menu ul {
 	float: right;
 	margin: 0;
-	padding: 40px 0px 0px 0px;
+	padding: 40px 0px 0px;
 	list-style: none;
 	line-height: normal;
 }
 
 #menu li {
 	float: left;
-	margin-right: 5px;
+	margin-right: 0.333em;
 }
 
 #menu a {
 	display: block;
-	margin-left: 1px;
-	padding: 5px 20px 5px 20px;
+	margin-left: 0.067em;
+	padding: 0.333em 1.333em 0.333em 1.333em;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
-	font-size: 18px;
+	font-size: 1.2em;
 	font-weight: 300;
 	color: #8F8F8F;
 }
@@ -160,7 +160,7 @@ hr {
 #menu a:hover, #menu .current_page_item a {
 	text-decoration: none;
 	background: #E36122;
-	border-radius: 5px;
+	border-radius: 0.333em;
 	color: #FFFFFF;
 }
 
@@ -168,59 +168,56 @@ hr {
 
 #page-wrapper {
 	overflow: hidden;
-	background: #000000;
-	height: 70%;
+	background: none repeat scroll 0% 0% #000;
 }
 
 #page {
 	overflow: hidden;
-	/*width: 80%;*/
-	margin: 0px auto;
+	margin: 0 auto;
 	color: #8F8F8F;
-	padding: 0 5% 0 5%;
+	padding: 50px 0px;
+	width: 1000px;
 }
 
 /** CONTENT */
 
 #login {
-	width: 60%;
 	text-align: right;
 	float: right;
-	margin-top: 1%;
-	margin-right: 1%;
-	padding-bottom: 1%;
 }
 
 #login .button-style {
 	display: inline-block;
-	margin-top: 10px;
-	margin-left: 5px;
-	padding: 5px 15px 5px 15px;
+	margin-top: 0.667em;
+	margin-left: 0.333em;
+	margin-right: 0.5em;
+	padding: 0.333em 1em 0.333em 1em;
 	/* Arancione cadmio */
 	background: #E36122;
-	border-radius: 5px;
-	height: 25px;
+	border-radius: 0.333em;
+	height: 1.667em;
 }
 
 #login .button-style a{
-	letter-spacing: 1px;
+	letter-spacing: 0.067em;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
-	font-size: 12px;
+	font-size: 0.8em;
 	color: #FFFFFF;
 }
 
 input.text {
 	background: whitesmoke;
-	border: 1px solid #E36122;
-	height: 25px;
+	border: 0.067em solid #E36122;
+	height: 1.667em;
 	font-family: 'Abel', sans-serif;
-	font-size: 15px;
-	padding-left: 5px;
-	margin-right: 8px;
-
+	font-size: 1em;
+	padding-left: 0.667em;
+	margin-right: 0.533em;
+	margin-bottom: 0.333em;
+	margin-top: 0.333em;
 }
 
 input.file {
@@ -231,20 +228,20 @@ input.file {
 }
 
 .textLabel {
-	margin-right: 5px;
+	margin-right: 0.667em;
 }
 
 #page .textLabel {
-	margin-right: 15px;
+	margin-right: 1em;
 }
 
 #page .textLabelWizard {
-	width: 55px; 
+	width: 3.667em; 
 }
 
 
 #page .text {
-	margin-right: 15px;
+	margin-right: 1em;
 }
 
 #content {
@@ -252,17 +249,17 @@ input.file {
 }
 
 #content h2 {
-	padding: 0px 0px 30px 0px;
+	padding-bottom: 30px;
 	letter-spacing: -1px;
 	font-size: 36px;
 	color: #C04000;
 }
 
 #content .subtitle {
-	padding: 0px 0px 30px 0px;
+	padding-bottom: 2em;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
-	font-size: 18px;
+	font-size: 1.2em;
 	color: #81AFC5;
 }
 
@@ -271,12 +268,12 @@ input.file {
 
 #left {
 	float: left;
-	width: 30%;
-	padding: 0px 0px 20px 0px;
+	width: 320px;
+	margin-right: 20px; 
 }
 
 #left h2 {
-	padding: 0px 0px 30px 5px;
+	padding: 0 0 2em 0.333em;
 	letter-spacing: -1px;
 	font-size: 2em;
 	color: #C04000;
@@ -285,18 +282,13 @@ input.file {
 /** RIGHT **/
 #right {
 	float: right;
-	width: 60%;
-	/*padding: 0px 0px 20px 0px;*/
+	width: 640px;
 }
 
 /* Footer */
 
 #footer {
-	/*height: 100px;*/
-	height: 5%;
-	margin: 0 auto;
-	padding: 0 5% 0 5%;
-	font-family: 'Abel', sans-serif;
+	overflow: hidden;
 	/*IE*/
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#5F5F5F');
 	/*Browser WEBKIT */
@@ -307,9 +299,9 @@ input.file {
 
 #footer p {
 	margin: 0;
-	letter-spacing: 1px;
+	letter-spacing: 0.067em;
 	line-height: normal;
-	font-size: 14px;
+	font-size: 0.933em;
 	text-transform: uppercase;
 	text-align: center;
 	color: #4D565E;
@@ -328,8 +320,8 @@ input.file {
 #footer-content {
 	overflow: hidden;
 	width: 80%;
-	margin: 0px auto;
-	padding: 50px 0px 50px 0px;
+	margin: 0 auto;
+	padding: 3.333em 0 3.333em 0;
 	color: #717171;
 }
 
@@ -337,10 +329,10 @@ input.file {
 }
 
 #footer-content h2 {
-	margin: 0px;
-	padding: 0px 0px 30px 0px;
+	margin: 0;
+	padding-bottom: 2em;
 	letter-spacing: -1px;
-	font-size: 30px;
+	font-size: 2em;
 	color: #B5A871;
 }
 
@@ -352,7 +344,7 @@ input.file {
 #footer-content #fbox1 {
 	float: left;
 	width: 320px;
-	margin-right: 20px;
+	margin-right: 1.333em;
 }
 
 #footer-content #fbox2 {
@@ -365,7 +357,7 @@ input.file {
 #banner-wrapper {
 	overflow: hidden;
 	height: 345px;
-	padding: 40px 0px;
+	padding: 2.667em 0;
 	background: url(images/img03.png) repeat;
 }
 
@@ -379,33 +371,33 @@ input.file {
 
 .button-style {
 	display: inline-block;
-	margin-top: 30px;
-	padding: 7px 30px;
+	margin-top: 2em;
+	padding: 0.467em 2em;
 	/* Arancione cadmio */
 	background: #E36122;
-	border-radius: 5px;
+	border-radius: 0.667em;
 }
 
 .button-style a {
-	letter-spacing: 1px;
+	letter-spacing: 0.067em;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
-	font-size: 16px;
+	font-size: 1em;
 	color: #FFFFFF;
 }
 
 /* List Style 1 */
 
 ul.style1 {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 ul.style1 li {
-	padding: 20px 0px 20px 0px;
+	padding: 1.333em 0 1.333em 0;
 	border-top: 1px dashed #E6E7DC;
 }
 
@@ -420,38 +412,38 @@ ul.style1 a:hover {
 }
 
 ul.style1 .first {
-	padding-top: 0px;
+	padding-top: 0;
 	border-top: none;
 }
 
 /* List Style 2 */
 
 ul.style2 {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 ul.style2 li {
-	padding: 9px 0px 9px 0px;
-	border-top: 1px dashed #E6E7DC;
+	padding: 0.6em 0 0.6em 0;
+	border-top: 0.067em dashed #E6E7DC;
 }
 
 ul.style2 .first {
-	padding-top: 0px;
+	padding-top: 0;
 	border-top: none;
 }
 
 /* List style 3 */
 
 ul.style3 {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 ul.style3 li {
-	padding: 20px 0px 20px 0px;
+	padding: 1.333em 0 1.333em 0;
 	background: url(images/link-style1-divider.png) repeat-x left top;
 }
 
@@ -462,32 +454,43 @@ ul.style3 p {
 
 ul.style3 img {
 	float: left;
-	margin-top: 3px;
-	margin-right: 20px;
+	margin-top: 0.2em;
+	margin-right: 1.333em;
 }
 
 ul.style3 .posted {
-	padding: 10px 0px 0px 0px;
+	padding-top: 0.667em;
 	font-size: 8pt;
 	color: #A2A2A2;
 }
 
 ul.style3 .first {
-	padding-top: 0px;
+	padding-top: 0;
 	background: none;
 }
 
 /* CHANGE LANGUAGE */
 #language {
-	float: right;
-	width: 950px;
-	height: 10px;
+	width: 100%;
 	text-align: right;
-	margin-top: 5px;
-	margin-right: 5px;
+	margin-top: 0.333em;
+	margin-right: 0.333em;
 }
 
 ul.ui-autocomplete.ui-menu {
 	font-family: 'Abel', sans-serif;
-	font-size: 15px;
+	font-size: 1em;
+}
+
+/* DIALOG */
+#dialog {
+	font-family: 'Abel', sans-serif;
+	font-size: 1em;
+	color: #8F8F8F;
+}
+
+.ui-widget-header {
+	background: #E36122;
+	color: #FFFFFF;
+	font-family: 'Abel', sans-serif;
 }
