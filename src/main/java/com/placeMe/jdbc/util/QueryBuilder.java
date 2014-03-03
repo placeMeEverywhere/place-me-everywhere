@@ -41,5 +41,8 @@ public class QueryBuilder {
 																	"FROM location l, administrative_area_level_1 a, country c " +
 																	"WHERE l.id_area = a.id " +
 																	"AND a.id_country = c.id";
+	
+	public static final String GET_PICTURES_FROM_EVENTS			=	"SELECT picture_name, picture_location " +
+																	"FROM picture_from_event";
 
 }

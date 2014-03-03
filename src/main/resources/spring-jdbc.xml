@@ -36,6 +36,8 @@
 	
 	<bean id="geolocationDAO" class="com.placeMe.jdbc.dao.GeolocationDAO" parent="abstractDAO" />
 	
+	<bean id="picturesFromEventsDAO" class="com.placeMe.jdbc.dao.PicturesFromEventsDAO" parent="abstractDAO" />
+	
 	<!-- SERVICE Layer -->
 	<bean id="abstractService" class="com.placeMe.jdbc.service.PlaceMeService" abstract="true" />
 	

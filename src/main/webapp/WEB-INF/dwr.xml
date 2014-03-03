@@ -7,7 +7,9 @@
     	<create creator="new" javascript="GeolocationAjax">
     		<param name="class" value="com.placeMe.web.ajax.GeolocationAjax"/>
     	</create>
-    	
+		<create creator="new" javascript="CarouselPicturesAjax">
+    		<param name="class" value="com.placeMe.web.ajax.CarouselPicturesAjax"/>
+    	</create>    	
     	<convert converter="bean" match="com.placeMe.web.ajax.Location"/>
   	</allow>
 </dwr>    

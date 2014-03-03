@@ -136,7 +136,7 @@ hr {
 #menu ul {
 	float: right;
 	margin: 0;
-	padding: 40px 0px 0px;
+	padding: 30px 0px 0px;
 	list-style: none;
 	line-height: normal;
 }
@@ -170,6 +170,7 @@ hr {
 #page-wrapper {
 	overflow: hidden;
 	background: none repeat scroll 0% 0% #DADADA;
+	height: 60%;
 }
 
 #page {
@@ -233,7 +234,7 @@ input.file {
 }
 
 #page .textLabel {
-	margin-right: 1em;
+	margin-right: 0.667em;
 }
 
 #page .textLabelWizard {
@@ -290,7 +291,7 @@ input.file {
 
 #footer {
 	overflow: hidden;
-	height: 35%;
+	height: 25%;
 	/*IE*/
 	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#5F5F5F');*/
 	/*Browser WEBKIT */
@@ -301,18 +302,17 @@ input.file {
 }
 
 #footer p {
-	margin: 0;
-	letter-spacing: 0.067em;
+	margin: 10px 0 10px 15px;
+	/*letter-spacing: 0.033em;*/
 	line-height: normal;
-	font-size: 0.933em;
-	text-transform: uppercase;
-	text-align: center;
-	color: #4D565E;
+	font-size: 1.1em;
+	color: white;
+	font-weight: bold;
 }
 
 #footer a {
-	color: #4D565E;
-	height: 250px;
+	color: white;
+	margin-top: 1.5%;
 }
 
 /* Three Column Footer Content */
@@ -479,6 +479,7 @@ ul.style3 .first {
 	text-align: right;
 	margin-top: 0.333em;
 	margin-right: 0.333em;
+	color: black;
 }
 
 ul.ui-autocomplete.ui-menu {
