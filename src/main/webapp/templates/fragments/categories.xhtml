@@ -4,6 +4,7 @@
 	  xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
       >
     <f:view locale="#{language.locale}">  
     <f:loadBundle basename="com.placeMe.messages.Language" var="lang_msg"/>
@@ -12,18 +13,25 @@
 			<div id="left">
 				<h2><h:outputText value="#{lang_msg['label.categories']}" /></h2>
 				<ul class="style3">
-					<li class="first"><h:graphicImage name="icons/disco_1.png" library="images" />
-						<p>Nullam non wisi a sem eleifend. Donec mattis libero eget urna. </p>
-						<p class="posted">August 11, 2002  |  (10 )  Comments</p>
-					</li>
-					<li><h:graphicImage name="icons/disco_3.png" library="images" />
-						<p>Nullam non wisi a sem eleifend. Donec mattis libero eget urna. </p>
-						<p class="posted">August 11, 2002  |  (10 )  Comments</p>
-					</li>
-					<li><h:graphicImage name="icons/disco_2.png" library="images" />
-						<p>Nullam non wisi a sem eleifend. Donec mattis libero eget urna. </p>
-						<p class="posted">August 11, 2002  |  (10 )  Comments</p>
-					</li>
+					<c:forEach items="#{category.categories}" var="cat" varStatus="status">
+						<c:choose>
+							<c:when test="${status.count}==1">
+								<li class="first">
+									<h:graphicImage name="${cat.categoryImage}" library="images" />
+									<p>${lang_msg[cat.categoryLabel]}</p>
+									<p class="posted">August 11, 2002  |  (10 )  Comments</p>
+								</li>
+							</c:when>
+							<c:otherwise>
+								<li>
+									<h:graphicImage name="${cat.categoryImage}" library="images" />
+									<p>${lang_msg[cat.categoryLabel]}</p>
+									<p class="posted">August 11, 2002  |  (10 )  Comments</p>
+								</li>
+							</c:otherwise>		
+						</c:choose>    
+							
+					</c:forEach>					
 				</ul>
 				<div class="clearfix"></div>			
 			</div>

@@ -44,5 +44,8 @@ public class QueryBuilder {
 	
 	public static final String GET_PICTURES_FROM_EVENTS			=	"SELECT picture_name, picture_location " +
 																	"FROM picture_from_event";
+	
+	public static final String GET_ALL_CATEGORIES				=	"SELECT id, category_name, category_image, category_label " +
+																	"FROM category";
 
 }

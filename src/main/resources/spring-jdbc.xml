@@ -32,11 +32,10 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<bean id="userDAO" class="com.placeMe.jdbc.dao.UserDAO" parent="abstractDAO" />
-	
-	<bean id="geolocationDAO" class="com.placeMe.jdbc.dao.GeolocationDAO" parent="abstractDAO" />
-	
-	<bean id="picturesFromEventsDAO" class="com.placeMe.jdbc.dao.PicturesFromEventsDAO" parent="abstractDAO" />
+	<bean id="userDAO" class="com.placeMe.jdbc.dao.UserDAO" parent="abstractDAO" />	
+	<bean id="geolocationDAO" class="com.placeMe.jdbc.dao.GeolocationDAO" parent="abstractDAO" />	
+	<bean id="picturesFromEventsDAO" class="com.placeMe.jdbc.dao.PicturesFromEventsDAO" parent="abstractDAO" />	
+	<bean id="categoryDAO" class="com.placeMe.jdbc.dao.CategoryDAO" parent="abstractDAO" />
 	
 	<!-- SERVICE Layer -->
 	<bean id="abstractService" class="com.placeMe.jdbc.service.PlaceMeService" abstract="true" />

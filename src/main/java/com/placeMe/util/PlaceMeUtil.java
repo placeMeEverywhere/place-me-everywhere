@@ -17,6 +17,7 @@ import javax.crypto.spec.PBEKeySpec;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class PlaceMeUtil {
+		
 	
 	static {
         Security.insertProviderAt(new BouncyCastleProvider(), 1);
@@ -43,7 +44,7 @@ public class PlaceMeUtil {
         cipher.init(Cipher.DECRYPT_MODE, key, generateIV(cipher), random);
         return new String(cipher.doFinal(ciphertext));
     }
-
+    
     private static SecretKey generateKey(String passphrase) throws NoSuchAlgorithmException, InvalidKeySpecException {
         PBEKeySpec keySpec = new PBEKeySpec(passphrase.toCharArray(), salt.getBytes(), iterations, keyLength);
         SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWITHSHA256AND256BITAES-CBC-BC");
