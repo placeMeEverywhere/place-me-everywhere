@@ -11,9 +11,12 @@
 	    	<title><h:outputText value="#{lang_msg['main.label.title']}" /></title>
 	    	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
 			<link href="http://fonts.googleapis.com/css?family=Abel|Satisfy" rel="stylesheet" type="text/css" />
-			<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
-			<h:outputStylesheet name="default.css" media="screen" library="css" />
-			<h:outputStylesheet name="jcarousel-ajax.css" media="screen" library="css" />
+			<h:outputStylesheet name="jquery-ui_desktop.css" media="screen and (min-width : 1224px)" library="css" />
+			<h:outputStylesheet name="jquery-ui_320_480.css" media="screen and (min-width : 1224px)" library="css" />
+			<h:outputStylesheet name="default_desktop.css" media="only screen and (min-width : 1224px)" library="css" />						
+			<h:outputStylesheet name="default_320_480.css" media="only screen and (min-width : 320px) and (max-width : 480px)" library="css" />
+			<h:outputStylesheet name="jcarousel-ajax_desktop.css" media="only screen and (min-width : 1224px)" library="css" />
+			<h:outputStylesheet name="jcarousel-ajax_320_480.css" media="only screen and (min-width : 320px) and (max-width : 480px)" library="css" />
 			<h:outputStylesheet name="wizard.css" media="screen" library="css" />			
 			<script type='text/javascript' src='/placeMe/dwr/engine.js'></script>
 			<script type='text/javascript' src='/placeMe/dwr/interface/GeolocationAjax.js'></script>
@@ -41,9 +44,9 @@
 				   	</ui:insert>
 				   	<ui:insert name="mainBody" >
 				   		<ui:include src="fragments/main.xhtml" />
-				   	</ui:insert>
-				   	<div class="clearfix"></div>
+				   	</ui:insert>				   	
 			   	</div>
+			   	<div class="clearfix"></div>
 		    </div>
 		 
 		    <div id="footer">
