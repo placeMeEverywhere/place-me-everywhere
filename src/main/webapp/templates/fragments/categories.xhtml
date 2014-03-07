@@ -17,16 +17,20 @@
 						<c:choose>
 							<c:when test="${status.count}==1">
 								<li class="first">
-									<h:graphicImage name="${cat.categoryImage}" library="images" />
+									<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
 									<p>${lang_msg[cat.categoryLabel]}</p>
-									<p class="posted">August 11, 2002  |  (10 )  Comments</p>
+									<h:form>
+									<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
+									</h:form>
 								</li>
 							</c:when>
 							<c:otherwise>
 								<li>
-									<h:graphicImage name="${cat.categoryImage}" library="images" />
+									<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
 									<p>${lang_msg[cat.categoryLabel]}</p>
-									<p class="posted">August 11, 2002  |  (10 )  Comments</p>
+									<h:form>
+									<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
+									</h:form>
 								</li>
 							</c:otherwise>		
 						</c:choose>    

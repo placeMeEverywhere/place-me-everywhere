@@ -268,9 +268,9 @@ input.file {
 /** LEFT **/
 
 #left {
-	float: left;
-	width: 40%;
-	margin-right: 5px; 
+	margin-right: 5px;
+	height: 140px; 
+	width: 350px;
 }
 
 #left h2 {
@@ -282,10 +282,12 @@ input.file {
 
 /** RIGHT **/
 #right {
-	float: right;
-	width: 55%;
-	margin-right: 5px;
-	
+	float: left;
+	height: 150px;	
+	width: 350px;
+	padding-left: 5px;
+	padding-top: 15px;
+	border-top: 1px solid;	
 }
 
 /* Footer */
@@ -379,7 +381,9 @@ input.file {
 	/* Arancione cadmio */
 	background: #E36122;
 	border-radius: 0.667em;
-	margin-top: 140px;
+	margin-top: 50px;
+	float: right;
+	margin-right: 10px;
 }
 
 .button-style a {
@@ -447,26 +451,48 @@ ul.style3 {
 }
 
 ul.style3 li {
-	padding: 10px 0 10px 0;
+	padding: 3px 0 3px 0;
 	background: url(images/link-style1-divider.png) repeat-x left top;
+	display: inline;
+	float: left;
+	width: 30%;
+	margin-right: 6px;
+	margin-left: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	cursor: pointer;
+	height: 80px;
+}
+
+ul.style3 li:hover {
+	background: #DADADA;
+	background: -webkit-gradient(linear, left top, left bottom, from(#DADADA), to(#E36122));
+	background: -webkit-linear-gradient(top,  #DADADA,  #E36122);
+	background: -moz-linear-gradient(top,  #DADADA,  #E36122);
+	background: -ms-linear-gradient(top,  #DADADA,  #E36122);
+	background: -o-linear-gradient(top,  #DADADA,  #E36122);
+	background: linear-gradient(top,  #DADADA,  #E36122);
 }
 
 ul.style3 p {
 	margin: 0px;
 	padding: 0px;
+	display: none;
 }
 
 ul.style3 img {
-	float: left;
-	margin-top: 0.2em;
-	margin-right: 1.333em;
-	width: 40px;
-	height: 40px;
+	float: left;	
+	margin-right: 5px;
+	padding-left: 10px;
+	width: 80px;
+	height: 80px;
 }
 
 ul.style3 .posted {
 	font-size: 8pt;
 	color: black;
+	margin-top: 25px;
 }
 
 ul.style3 .first {
@@ -500,4 +526,92 @@ ul.ui-autocomplete.ui-menu {
 	background: #E36122;
 	color: #FFFFFF;
 	font-family: 'Abel', sans-serif;
+}
+
+/********************* LOGIN **************************/
+
+#login-content {
+  display: none;
+  position: absolute;
+  z-index: 999;    
+  background: #027F7F;
+  background-image: linear-gradient(top, #fff, #eee);  
+  padding: 15px;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
+  border-radius: 3px 0 3px 3px;
+  width: 70%;
+  margin-left: -64%;
+}
+
+#login-content .button-style {
+	margin-top: .5em;
+	margin-right: .5em;
+	padding: 0.333em 1em;
+	font-size: .9em;
+	
+}
+
+/*--------------------*/
+
+#inputs input {
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 238px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+}
+
+#inputs input:focus {
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+
+#login #submit {    
+  background-color: #d14545;
+  background-image: linear-gradient(top, #e97171, #d14545);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #7e1515;
+  float: left;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 14px Arial, Helvetica;
+  color: #fff;
+}
+
+#login #submit:hover,
+#login #submit:focus {    
+  background-color: #e97171;
+  background-image: linear-gradient(top, #d14545, #e97171);
+} 
+
+#login #submit:active {   
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+}
+
+#login #submit::-moz-focus-inner {
+  border: none;
+}
+
+#login label {
+  float: right;
+  line-height: 30px;
+}
+
+#login label input {
+  position: relative;
+  top: 2px;
+  right: 2px;
 }

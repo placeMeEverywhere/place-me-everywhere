@@ -8,14 +8,6 @@
 	<f:view locale="#{language.locale}">
 		<f:loadBundle basename="com.placeMe.messages.Language" var="lang_msg"/>      
 	    <body>
-			<style type="text/css">
-				.dlg-no-close .ui-dialog-titlebar-close {
-					display: none;
-				}
-				.dlg-no-title .ui-dialog-titlebar {
-					display: none;
-				}
-			</style>
 		    <ui:composition>
 			    <div id="header">
 					<div id="language">
@@ -30,34 +22,17 @@
 		                  	</h:commandLink>	
 		               	</h:form>
 						<a id="button" style="cursor: pointer">#{lang_msg['label.login']}</a>
-							<div id="dialog" title="#{lang_msg['label.login']}">
-								<h:form>
-									<div id="login">
-										<h:outputText value="#{lang_msg['label.username']}" styleClass="textLabel"/>
-										<h:inputText id="username" value="#{auth.username}" styleClass="text"  />
-										<h:outputText value="#{lang_msg['label.password']}" styleClass="textLabel" />
-										<h:inputSecret id="password" value="#{auth.password}" styleClass="text" /> 
-										<p class="button-style">
-											<h:commandLink action="#{auth.login}" value="#{lang_msg['label.signIn']}" />
-										</p>
-									</div>
-								</h:form>
-							</div>								
-							<script type="text/javascript">
-								$(function() {
-									$("#dialog").dialog({
-										autoOpen: false,
-										modal: true,
-										show: {effect: "fade", duration: 2000}, 
-										hide: {effect: "explode", duration: 1000},
-										width: 400,
-										dialogClass: "dlg-no-close"
-									});
-									$("#button").on("click", function() {
-										$("#dialog").dialog("open");
-									});				
-								});
-							</script>  
+						<div id="login-content">
+							<h:form>
+								<h:outputText value="#{lang_msg['label.username']}" styleClass="textLabel" />
+								<h:inputText id="username" styleClass="text" value="#" size="25" required="true" label="Username" placeholder="Your email address"/>
+								<h:outputText value="#{lang_msg['label.password']}" styleClass="textLabel" />
+								<h:inputText id="password" styleClass="text" value="#" size="25" required="true" label="Password" placeholder="Your email address"/><br />
+								<p class="button-style">
+									<h:commandLink value="#{lang_msg['label.login']}" action="#{insertUser.startWizard}" />
+								</p>
+							</h:form>
+						</div>							
 					</div>		    
 					<div id="logo">
 						
