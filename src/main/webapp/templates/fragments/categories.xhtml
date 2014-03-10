@@ -13,9 +13,9 @@
 			<div id="left">
 				<h2><h:outputText value="#{lang_msg['label.categories']}" /></h2>
 				<ul class="style3">
-					<c:forEach items="#{category.categories}" var="cat" varStatus="status">
-						<c:choose>
-							<c:when test="${status.count}==1">
+					<c:forEach items="#{category.categories}" var="cat" varStatus="status">						
+						<c:choose>							
+							<c:when test="${status.first}">
 								<li class="first">
 									<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
 									<p>${lang_msg[cat.categoryLabel]}</p>

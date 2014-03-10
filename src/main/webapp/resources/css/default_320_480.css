@@ -84,7 +84,7 @@ hr {
 #header-wrapper {
 	overflow: hidden;
 	/*height: 157px;*/
-	height: 16%;
+	height: 18%;
 	/*IE*/
 	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5A5A5A', endColorstr='#DADADA');
 	/*Browser WEBKIT */
@@ -127,15 +127,13 @@ hr {
 /* Menu */
 
 #menu {
-	float: right;
 	height: 50%;
-	width: 90%;
+	width: 75%;
 	margin-right: 5%;
-	padding-top: 1.5%;
+	margin-left: 2%;
 }
 
 #menu ul {
-	float: right;
 	margin: 0;
 	list-style: none;
 	line-height: normal;
@@ -170,14 +168,14 @@ hr {
 #page-wrapper {
 	overflow: hidden;
 	background: none repeat scroll 0% 0% #DADADA;
-	height: 60%;
+	height: 55%;
 }
 
 #page {
 	overflow: hidden;
 	margin: 0 auto;
 	color: black;
-	padding: 10px 0px;
+	height: 100%;
 	width: 100%;
 }
 
@@ -248,6 +246,7 @@ input.file {
 
 #content {
 	width: 100%;
+	height: 90%;
 }
 
 #content h2 {
@@ -268,9 +267,10 @@ input.file {
 /** LEFT **/
 
 #left {
+	padding: 10px 0;
 	margin-right: 5px;
-	height: 140px; 
-	width: 350px;
+	height: 44%; 
+	width: 100%;
 }
 
 #left h2 {
@@ -285,7 +285,7 @@ input.file {
 /** RIGHT **/
 #right {
 	float: left;
-	height: 150px;	
+	height: 50%;	
 	width: 100%;
 	padding-left: 5px;
 	padding-top: 15px;
@@ -383,7 +383,7 @@ input.file {
 	/* Arancione cadmio */
 	background: #E36122;
 	border-radius: 0.667em;
-	margin-top: 50px;
+	margin-top: 5%;
 	float: right;
 	margin-right: 35px;
 }
@@ -441,7 +441,7 @@ ul.style2 li {
 
 ul.style2 .first {
 	padding-top: 0;
-	border-top: none;
+	border-top: none;	
 }
 
 /* List style 3 */
@@ -458,10 +458,9 @@ ul.style3 li {
 	display: inline;
 	float: left;
 	width: 30%;
-	margin-right: 6px;
-	margin-left: 5px;
-	
-	height: 80px;
+	margin-right: 1%;
+	margin-left: 1%;	
+	height: 70px;
 }
 
 
@@ -474,11 +473,9 @@ ul.style3 p {
 
 ul.style3 img {
 	float: left;	
-	margin-right: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
-	width: 80px;
-	height: 80px;
+	padding: 5px 10px 5px 10px;
+	width: 70px;
+	height: 70px;
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -497,8 +494,8 @@ ul.style3 img:active {
 	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0.5);
 	box-shadow: 0 0 0 rgba(0,0,0,0.5);
 	cursor: pointer;
-	width: 75px;
-	height: 75px;
+	width: 65px;
+	height: 65px;
 }
 
 ul.style3 .posted {
@@ -507,14 +504,14 @@ ul.style3 .posted {
 	margin-top: 25px;
 }
 
-ul.style3 .first {
-	padding-top: 0;
-	background: none;
+ul.style3 .first {	
+	margin-left: 4%;
 }
 
 /* CHANGE LANGUAGE */
 #language {
-	width: 50px;
+	width: 25%;
+	height: 20%;
 	text-align: right;
 	float: right;
 	margin-top: 0.333em;
@@ -552,7 +549,7 @@ ul.ui-autocomplete.ui-menu {
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
   border-radius: 3px 0 3px 3px;
   width: 70%;
-  margin-left: -64%;
+  margin-left: -53%;
 }
 
 #login-content .button-style {

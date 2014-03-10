@@ -9,16 +9,17 @@
      	<ui:composition template="/templates/default.xhtml">
      		<ui:define name="mainBody">
      			<div id="right">
-		     		<h:form>
-						<div id="content">
-								<h2>#{lang_msg['label.content.h2']}</h2>
-								<p>Testo da <strong>Decidere</strong>
-								</p>
-								<p class="button-style">
-									<h:commandLink value="#{lang_msg['label.signUp']}" action="#{insertUser.startWizard}" />
-								</p>							
-						</div>
-					</h:form>
+	     			<div id="content">
+			     		<h:form>
+							
+									<h2>#{lang_msg['label.content.h2']}</h2>
+									<p>Testo da <strong>Decidere</strong>
+									</p>
+									<p class="button-style">
+										<h:commandLink value="#{lang_msg['label.signUp']}" action="#{insertUser.startWizard}" />
+									</p>							
+						</h:form>
+					</div>				
 				</div> 				
      		</ui:define>     		
     	</ui:composition>
