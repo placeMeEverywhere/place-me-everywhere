@@ -274,20 +274,22 @@ input.file {
 }
 
 #left h2 {
-	padding: 0px 0px 10px 0.333em;
+	padding: 0px 0px 10px 0px;
 	letter-spacing: -1px;
 	font-size: 1.5em;
 	color: #C04000;
+	width: 30%;
+	margin-left: 10px;
 }
 
 /** RIGHT **/
 #right {
 	float: left;
 	height: 150px;	
-	width: 350px;
+	width: 100%;
 	padding-left: 5px;
 	padding-top: 15px;
-	border-top: 1px solid;	
+	border-top: 1px solid #8F8F8F;	
 }
 
 /* Footer */
@@ -383,7 +385,7 @@ input.file {
 	border-radius: 0.667em;
 	margin-top: 50px;
 	float: right;
-	margin-right: 10px;
+	margin-right: 35px;
 }
 
 .button-style a {
@@ -458,22 +460,11 @@ ul.style3 li {
 	width: 30%;
 	margin-right: 6px;
 	margin-left: 5px;
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	cursor: pointer;
+	
 	height: 80px;
 }
 
-ul.style3 li:hover {
-	background: #DADADA;
-	background: -webkit-gradient(linear, left top, left bottom, from(#DADADA), to(#E36122));
-	background: -webkit-linear-gradient(top,  #DADADA,  #E36122);
-	background: -moz-linear-gradient(top,  #DADADA,  #E36122);
-	background: -ms-linear-gradient(top,  #DADADA,  #E36122);
-	background: -o-linear-gradient(top,  #DADADA,  #E36122);
-	background: linear-gradient(top,  #DADADA,  #E36122);
-}
+
 
 ul.style3 p {
 	margin: 0px;
@@ -485,8 +476,29 @@ ul.style3 img {
 	float: left;	
 	margin-right: 5px;
 	padding-left: 10px;
+	padding-right: 10px;
 	width: 80px;
 	height: 80px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	cursor: pointer;
+	background: #DADADA;
+	background: -webkit-gradient(linear, left top, left bottom, from(#DADADA), to(#E36122));
+	background: -webkit-linear-gradient(top,  #DADADA,  #E36122);
+	background: -moz-linear-gradient(top,  #DADADA,  #E36122);
+	background: -ms-linear-gradient(top,  #DADADA,  #E36122);
+	background: -o-linear-gradient(top,  #DADADA,  #E36122);
+	background: linear-gradient(top,  #DADADA,  #E36122);
+}
+
+ul.style3 img:active {
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0.5);
+	box-shadow: 0 0 0 rgba(0,0,0,0.5);
+	cursor: pointer;
+	width: 75px;
+	height: 75px;
 }
 
 ul.style3 .posted {
