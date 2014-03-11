@@ -266,6 +266,10 @@ input.file {
 
 /** LEFT **/
 
+#_category #left {
+	display: none;
+}
+
 #left {
 	padding: 10px 0;
 	margin-right: 5px;
