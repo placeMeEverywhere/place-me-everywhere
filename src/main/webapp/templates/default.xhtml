@@ -25,6 +25,7 @@
 			<script type='text/javascript' src='/placeMe/jq/jcarousel-ajax.js' />
 			<script type="text/javascript">
 			$(document).ready(function(){
+				  document.addEventListener("touchstart", function(){}, true);	
 				  $('#button').click(function(){
 				    $(this).next('#login-content').slideToggle();
 				    $(this).toggleClass('active');          
@@ -39,7 +40,7 @@
 			<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	    </h:head>
 	 	
-	    <h:body onload="javascript: avatarReset();" ontouchstart=""> 
+	    <h:body onload="javascript: avatarReset();"> 
 			<div id="header-wrapper">
 				<ui:insert name="header" >
 				  <ui:include src="fragments/header.xhtml" />

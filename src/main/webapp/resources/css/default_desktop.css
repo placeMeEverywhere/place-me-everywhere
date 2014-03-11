@@ -106,8 +106,8 @@ hr {
 
 #logo {
 	float: left;
-	width: 300px;
-	height: 80px;
+	width: 60%;
+	height: 25%;
 	margin: 0;
 	padding: 0;
 }
@@ -129,8 +129,8 @@ hr {
 
 #menu {
 	float: right;
-	width: 650px;
-	height: 85px;
+	width: 55%;
+	height: 70%;
 }
 
 #menu ul {
@@ -475,7 +475,9 @@ ul.style3 .first {
 
 /* CHANGE LANGUAGE */
 #language {
-	width: 100%;
+	width: 20%;
+	height: 25%;
+	float: right;
 	text-align: right;
 	margin-top: 0.333em;
 	margin-right: 0.333em;

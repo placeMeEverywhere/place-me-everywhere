@@ -13,29 +13,35 @@
 			<div id="left">
 				<h2><h:outputText value="#{lang_msg['label.categories']}" /></h2>
 				<ul class="style3">
-					<c:forEach items="#{category.categories}" var="cat" varStatus="status">						
-						<c:choose>							
-							<c:when test="${status.first}">
-								<li class="first">
-									<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
-									<p>${lang_msg[cat.categoryLabel]}</p>
-									<h:form>
-									<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
-									</h:form>
-								</li>
-							</c:when>
-							<c:otherwise>
-								<li>
-									<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
-									<p>${lang_msg[cat.categoryLabel]}</p>
-									<h:form>
-									<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
-									</h:form>
-								</li>
-							</c:otherwise>		
-						</c:choose>    
-							
-					</c:forEach>					
+					<h:form>
+						<c:forEach items="#{category.categories}" var="cat" varStatus="status">						
+							<c:choose>							
+								<c:when test="${status.first}">
+									<li class="first">
+										<h:commandLink class="linkImage" action="#{language.changeLanguage}" title="${lang_msg[cat.categoryLabel]}">
+											<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
+										</h:commandLink>
+										<p>${lang_msg[cat.categoryLabel]}</p>
+										<h:form>
+										<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
+										</h:form>
+									</li>
+								</c:when>
+								<c:otherwise>
+									<li>
+										<h:commandLink class="linkImage" action="#" title="${lang_msg[cat.categoryLabel]}">
+											<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
+										</h:commandLink>
+										<p>${lang_msg[cat.categoryLabel]}</p>
+										<h:form>
+										<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
+										</h:form>
+									</li>
+								</c:otherwise>		
+							</c:choose>    
+								
+						</c:forEach>
+					</h:form>					
 				</ul>			
 			</div>
 	    </ui:composition>
