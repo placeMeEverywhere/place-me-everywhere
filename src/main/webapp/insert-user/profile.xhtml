@@ -36,31 +36,23 @@
 												<strong><h:outputText value="#{insertUser.currentLocation.locationName} (#{insertUser.currentLocation.area.areaName}) [#{insertUser.currentLocation.area.country.countryName}]" styleClass="textLabelWizard" /></strong>
 											</c:when>
 										</span>
-									<c:otherwise>
-										<span style="float: right">
-											<input type="text" id="location" name="manual_location" value="#{insertUser.alternativeLocation}" class="text" size="20" label="#{lang_msg['label.localization']}" />
-										</span>
-									</c:otherwise>
+										<c:otherwise>
+											<span style="float: right">
+												<input type="text" id="location" name="manual_location" value="#{insertUser.alternativeLocation}" class="text" size="30" label="#{lang_msg['label.localization']}" />
+											</span>
+										</c:otherwise>
 									</c:choose>
 								<div class="clearfix"/>
 							</div>
-							
-							<div style="padding-bottom: 10px;">
-								<h:outputText value="#{lang_msg['label.avatar']}" styleClass="textLabel" />
-								<div id="avatarBtn" style="height: 350px; width: 260px;border: 1px dashed #BBB; cursor:pointer; float:right; margin-right: 15px;">
-									<t:inputFileUpload id="avatarFile" styleClass="file" value="#{insertUser.avatar}" alt="#{lang_msg['label.avatar']}" title="#{lang_msg['label.avatar']}"/>
-								</div>
-								<div class="clearfix"/>
-							</div>
-							<div class="clearfix"/>
-						</div>
-						<div class="clearfix"/>
+						<div class="clearfix" />
 						<div id="wizardButtonLeft">
 							<p class="button-style"><h:commandLink action="#{insertUser.goToStartWizard}" value="#{lang_msg['wizard.button.back']}" /></p>
 						</div>
 						
 						<div id="wizardButtonRight">
 							<p class="button-style"><h:commandLink action="#{insertUser.goToAddInfo}" value="#{lang_msg['wizard.button.next']}" /></p>
+						</div>
+						
 						</div>					
 					</h:form>
      		</ui:define>

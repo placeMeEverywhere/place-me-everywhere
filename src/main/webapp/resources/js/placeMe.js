@@ -5,8 +5,6 @@ function avatarReload(){
 	getLocation();
 	var e = sessionStorage.getItem('event');
 	$('#avatarBtn').css('background','url('+e+')');
-	$('#avatarBtn').css('background-size','260px 350px');
-	$('#avatarBtn').css('background-repeat','no-repeat');
 }
 
 function avatarReset(){
@@ -28,7 +26,7 @@ function showPosition(position){
 	GeolocationAjax.retrieveGeolocation(position.coords.latitude,position.coords.longitude,language,
 			{
 				errorHandler: function(errorString,exception) {
-					alert(errorString);
+					alert(exception);
 				}
 			});
 }
@@ -48,7 +46,7 @@ $(function () {
 
 function imageIsLoaded(e) {
 	$('#avatarBtn').css('background','url('+e.target.result+')');
-	$('#avatarBtn').css('background-size','260px 350px');
+	$('#avatarBtn').css('background-size','200px 250px');
 	$('#avatarBtn').css('background-repeat','no-repeat');
 	sessionStorage.setItem('event', JSON.stringify(e.target.result));
 }

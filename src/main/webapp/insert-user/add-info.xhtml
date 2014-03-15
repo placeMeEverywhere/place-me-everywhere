@@ -4,16 +4,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:t="http://myfaces.apache.org/tomahawk"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
       >
     <h:body>
      	<ui:composition template="/templates/insert-user.xhtml">
      		<ui:define name="mainBody">
 		     		<h:form>					
-						<div style="height: 250px">
-							Add Info
-							&nbsp;
-							<h:outputText value="#{insertUser.avatar.name}" />
-						</div>
+						<div>
+							<div style="padding-bottom: 10px;">
+								<h:outputText value="#{lang_msg['label.avatar']}" styleClass="textLabel" />
+								<div id="avatarBtn">
+									<t:inputFileUpload id="avatarFile" styleClass="file" value="#{insertUser.avatar}" alt="#{lang_msg['label.avatar']}" title="#{lang_msg['label.avatar']}"/>
+								</div>
+								<div class="clearfix"/>
+							</div>
+							<div class="clearfix"/>
+						</div>						
 						<div id="wizardButtonLeft">
 							<p class="button-style"><h:commandLink action="#{insertUser.goToProfile}" value="#{lang_msg['wizard.button.back']}" /></p>
 						</div>

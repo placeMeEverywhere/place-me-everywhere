@@ -170,14 +170,14 @@ hr {
 #page-wrapper {
 	overflow: hidden;
 	background: none repeat scroll 0% 0% #DADADA;
-	height: 60%;
+	height: 55%;
 }
 
 #page {
 	overflow: hidden;
 	margin: 0 auto;
 	color: black;
-	padding: 50px 0px;
+	padding: 25px 0px;
 	width: 1000px;
 }
 
@@ -224,8 +224,8 @@ input.text {
 
 input.file {
 	opacity:0; 
-	height: 350px; 
-	width: 260px; 
+	height: 250px; 
+	width: 200px; 
 	cursor:pointer;
 }
 
@@ -270,7 +270,7 @@ input.file {
 
 #left {
 	float: left;
-	width: 320px;
+	width: 280px;
 	margin-right: 20px; 
 }
 
@@ -284,14 +284,14 @@ input.file {
 /** RIGHT **/
 #right {
 	float: right;
-	width: 640px;
+	width: 680px;
 }
 
 /* Footer */
 
 #footer {
 	overflow: hidden;
-	height: 25%;
+	height: 30%;
 	/*IE*/
 	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#5F5F5F');*/
 	/*Browser WEBKIT */
@@ -312,7 +312,7 @@ input.file {
 
 #footer a {
 	color: white;
-	margin-top: 1.5%;
+	margin-top: 2.2%;
 }
 
 /* Three Column Footer Content */
@@ -456,6 +456,9 @@ ul.style3 p {
 	padding: 0px;
 }
 
+.linkImage {
+}
+
 ul.style3 img {
 	float: left;
 	margin-top: 0.2em;
@@ -514,8 +517,8 @@ ul.ui-autocomplete.ui-menu {
   padding: 15px;
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
   border-radius: 3px 0 3px 3px;
-  width: 25%;
-  margin-left: 43%;
+  width: 28%;
+  margin-left: -14.5%
 }
 
 #login-content .button-style {

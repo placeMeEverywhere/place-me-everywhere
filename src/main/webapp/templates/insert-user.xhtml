@@ -11,23 +11,25 @@
 	    	<title><h:outputText value="#{lang_msg['main.label.title']}" /></title>
 	    	<link href="http://fonts.googleapis.com/css?family=Oswald:400,300" rel="stylesheet" type="text/css" />
 			<link href="http://fonts.googleapis.com/css?family=Abel|Satisfy" rel="stylesheet" type="text/css" />
-			<h:outputStylesheet name="default_desktop.css" media="only screen and (min-width : 1224px)" library="css" />									
-			<h:outputStylesheet name="jcarousel-ajax_desktop.css" media="only screen and (min-width : 1224px)" library="css" />
-			<h:outputStylesheet name="wizard_desktop.css" media="only screen and (min-width : 1224px)" library="css" />
 			<!-- BEGIN: VARI DISPOSITIVI -->
-			<h:outputStylesheet name="default_320_480.css" media="only screen and (max-width : 320px)" library="css" />
-			<h:outputStylesheet name="default_320_480_ls.css" media="only screen and (min-width : 321px)" library="css" />			
-			<h:outputStylesheet name="jcarousel-ajax_320_480.css" media="only screen and (max-width : 320px)" library="css" />
-			<h:outputStylesheet name="jcarousel-ajax_320_480_ls.css" media="only screen and (min-width : 321px)" library="css" />
-			<h:outputStylesheet name="wizard_320_480.css" media="only screen and (max-width : 320px)" library="css" />
-			<h:outputStylesheet name="wizard_320_480_ls.css" media="only screen and (min-width : 321px)" library="css" />
+			<h:outputStylesheet name="default_small.css" media="only screen and (max-width: 320px)" library="css" />
+			<h:outputStylesheet name="default_small_ls.css" media="only screen and (min-width: 321px) and (max-width: 580px)" library="css" />			
+			<h:outputStylesheet name="jcarousel-ajax_small.css" media="only screen and (max-width: 320px)" library="css" />
+			<h:outputStylesheet name="jcarousel-ajax_small_ls.css" media="only screen and (min-width: 321px) and (max-width: 580px)" library="css" />
+			<h:outputStylesheet name="wizard_small.css" media="only screen and (max-width : 320px)" library="css" />
+			<h:outputStylesheet name="wizard_small_ls.css" media="only screen and (min-width : 321px) and (max-width: 580px)" library="css" />
+			<h:outputStylesheet name="jquery-ui_small.css" media="only screen and (max-width : 320px)" library="css" />			
 			<!-- END: VARI DISPOSITIVI -->			
-			<h:outputStylesheet name="wizard.css" media="screen" library="css" />			
+			<h:outputStylesheet name="default_large.css" media="screen and (min-width: 1024px)" library="css" />
+			<h:outputStylesheet name="jcarousel-ajax_large.css" media="screen and (min-width: 1024px)" library="css" />
+			<h:outputStylesheet name="wizard_large.css" media="screen and (min-width: 1024px)" library="css" />
+			<h:outputStylesheet name="jquery-ui_large.css" media="screen and (min-width: 1024px)" library="css" />
 			<script type='text/javascript' src='/placeMe/dwr/engine.js'></script>
 			<script type='text/javascript' src='/placeMe/dwr/interface/GeolocationAjax.js'></script>
 			<script type='text/javascript' src='/placeMe/dwr/interface/CarouselPicturesAjax.js'></script>
 			<script type='text/javascript' src='/placeMe/jq/jquery-1.8.1.min.js' />
 			<script type='text/javascript' src='/placeMe/jq/jquery.form.js' />
+			<script type='text/javascript' src='/placeMe/jq/jquery-ui.js' />
 			<script type='text/javascript' src='/placeMe/jq/jquery.jcarousel.min.js' />
 			<script type='text/javascript' src='/placeMe/jq/jcarousel-ajax.js' />
 			<script type="text/javascript">
