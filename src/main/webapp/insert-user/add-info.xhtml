@@ -10,8 +10,8 @@
     <h:body>
      	<ui:composition template="/templates/insert-user.xhtml">
      		<ui:define name="mainBody">
-		     		<h:form>					
-						<div>
+		     		<h:form enctype="multipart/form-data">					
+						<div class="mainWizardDiv">
 							<div style="padding-bottom: 10px;">
 								<h:outputText value="#{lang_msg['label.avatar']}" styleClass="textLabel" />
 								<div id="avatarBtn">

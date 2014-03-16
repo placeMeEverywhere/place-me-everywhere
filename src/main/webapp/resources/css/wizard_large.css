@@ -42,6 +42,14 @@
 		margin-right: 5px;
 	}
 	
+	.mainWizardDiv {
+		width: 75%;
+	}
+	
+	.wizardDiv #wizardButtonRight {
+		margin-top: 50px;
+	}
+	
 	#wizardButtonRight .button-style, #wizardButtonLeft .button-style {
 		display: inline-block;
 		margin-top: 10px;
@@ -63,10 +71,12 @@
 		color: #FFFFFF;
 	}
 	
+	
 	/** Modifica per visualizzare i messages del validatore sulla destra e non come elenco puntato. **/
 	.wizardDiv {
 		height: 250px; 
 		padding: 10px;
+		width: 75%;
 	}
 	
 	.wizardDiv ul {

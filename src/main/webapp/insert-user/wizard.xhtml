@@ -17,10 +17,12 @@
 						</h:inputText>
 						<h:messages globalOnly="true" />
 						<ul><li><h:message for="email" /></li></ul>
+						<br />
+						<div id="wizardButtonRight">
+							<p class="button-style"><h:commandLink action="#{insertUser.checkUser}" value="#{lang_msg['wizard.button.next']}" /></p>
+						</div>
 					</div>
-					<div id="wizardButtonRight">
-						<p class="button-style"><h:commandLink action="#{insertUser.checkUser}" value="#{lang_msg['wizard.button.next']}" /></p>
-					</div>
+					
 				</h:form>	
      		</ui:define>
     	</ui:composition>
