@@ -17,43 +17,43 @@
 							<li class="current_page_item"><p>#{lang_msg['wizard.user.insert.1']}</p></li>
 						</c:when>
 						<c:otherwise>
-							<li><p>#{lang_msg['wizard.user.insert.1']}</p></li>
+							<li class="not_current"><p>#{lang_msg['wizard.user.insert.1']}</p></li>
 						</c:otherwise>	
 					</c:choose>
-					<li><p>&gt;</p></li>
+					<li class="not_current"><p>&gt;</p></li>
 					<c:choose>
 						<c:when test="#{insertUser.steps[1]}">
 							<li class="current_page_item"><p>#{lang_msg['wizard.user.insert.2']}</p></li>
 						</c:when>
 						<c:otherwise>
-							<li><p>#{lang_msg['wizard.user.insert.2']}</p></li>
+							<li class="not_current"><p>#{lang_msg['wizard.user.insert.2']}</p></li>
 						</c:otherwise>	
 					</c:choose>
-					<li><p>&gt;</p></li>
+					<li class="not_current"><p>&gt;</p></li>
 					<c:choose>
 						<c:when test="#{insertUser.steps[2]}">
 							<li class="current_page_item"><p>#{lang_msg['wizard.user.insert.3']}</p></li>
 						</c:when>
 						<c:otherwise>
-							<li><p>#{lang_msg['wizard.user.insert.3']}</p></li>
+							<li class="not_current"><p>#{lang_msg['wizard.user.insert.3']}</p></li>
 						</c:otherwise>	
 					</c:choose>
-					<li><p>&gt;</p></li>
+					<li class="not_current"><p>&gt;</p></li>
 					<c:choose>
 						<c:when test="#{insertUser.steps[3]}">
 							<li class="current_page_item"><p>#{lang_msg['wizard.user.insert.4']}</p></li>
 						</c:when>
 						<c:otherwise>
-							<li><p>#{lang_msg['wizard.user.insert.4']}</p></li>
+							<li class="not_current"><p>#{lang_msg['wizard.user.insert.4']}</p></li>
 						</c:otherwise>	
 					</c:choose>
-					<li><p>&gt;</p></li>
+					<li class="not_current"><p>&gt;</p></li>
 					<c:choose>
 						<c:when test="#{insertUser.steps[4]}">
 							<li class="current_page_item"><p>#{lang_msg['wizard.user.insert.5']}</p></li>
 						</c:when>
 						<c:otherwise>
-							<li><p>#{lang_msg['wizard.user.insert.5']}</p></li>
+							<li class="not_current"><p>#{lang_msg['wizard.user.insert.5']}</p></li>
 						</c:otherwise>	
 					</c:choose>																				
 				</ul>

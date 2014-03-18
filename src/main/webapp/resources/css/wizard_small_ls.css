@@ -13,6 +13,14 @@
 		line-height: normal;
 	}
 	
+	#wizard li.not_current {
+		display: none;
+	}
+	
+	#wizard li.current_page_item {
+		width: 300px;
+	}	
+	
 	#wizard li {
 		float: left;
 	}
@@ -30,6 +38,7 @@
 	
 	#wizard .current_page_item p {
 		color: #E36122;
+		font-size: 2em;
 	}
 	
 	#wizardButtonRight {

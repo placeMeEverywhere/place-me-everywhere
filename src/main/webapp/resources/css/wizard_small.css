@@ -13,6 +13,14 @@
 		line-height: normal;
 	}
 	
+	#wizard li.not_current {
+		display: none;
+	}
+	
+	#wizard li.current_page_item {
+		width: 300px;
+	}
+	
 	#wizard li {
 		float: left;
 	}
@@ -30,27 +38,25 @@
 	
 	#wizard .current_page_item p {
 		color: #E36122;
+		font-size: 2em;
 	}
 	
 	#wizardButtonRight {
 		float: right; 
-		margin-right: 5px;
+		margin: 40px -40px 0px 0px;
 	}
 	
 	#wizardButtonLeft {
 		float: left; 
-		margin-right: 5px;
+		margin: 40px 0px 0px -40px;
 	}
 	
 	#wizardButtonRight .button-style, #wizardButtonLeft .button-style {
 		display: inline-block;
-		margin-top: 10px;
-		margin-left: 5px;
-		padding: 5px 15px 5px 15px;
 		/* Arancione cadmio */
 		background: #E36122;
 		border-radius: 5px;
-		height: 25px;
+		
 	}
 	
 	#wizardButtonRight .button-style a, #wizardButtonLeft .button-style a{
