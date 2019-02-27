@@ -11,3 +11,9 @@
 ## Compiled
 
 target/
+
+##############################
+## Intellij Files
+
+.idea/
+placeMe-web.iml
