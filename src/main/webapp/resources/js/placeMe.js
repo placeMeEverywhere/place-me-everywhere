@@ -23,7 +23,7 @@ function getLocation(){
 
 function showPosition(position){
 	var language = document.getElementsByTagName("html")[0].getAttribute("lang");
-	GeolocationAjax.retrieveGeolocation(position.coords.latitude,position.coords.longitude,language,
+	GeolocationAjax.retrieveGeolocationFromOpenStreetMap(position.coords.latitude,position.coords.longitude,language,
 			{
 				errorHandler: function(errorString,exception) {
 					alert(exception);

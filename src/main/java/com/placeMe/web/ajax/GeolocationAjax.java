@@ -1,25 +1,25 @@
 package com.placeMe.web.ajax;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
-import java.util.UUID;
-import javax.servlet.http.HttpSession;
-import org.apache.commons.io.IOUtils;
-import org.directwebremoting.WebContext;
-import org.directwebremoting.WebContextFactory;
-
 import com.placeMe.jdbc.SpringContext;
 import com.placeMe.jdbc.entity.AdministrativeAreaLevel1;
 import com.placeMe.jdbc.entity.Country;
 import com.placeMe.jdbc.entity.Location;
 import com.placeMe.jdbc.service.GeolocationService;
-
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JSONSerializer;
+import org.apache.commons.io.IOUtils;
+import org.directwebremoting.WebContext;
+import org.directwebremoting.WebContextFactory;
+
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+import java.util.UUID;
 
 import static com.placeMe.util.PlaceMeConstants.LOCATION_PARAM;
 
@@ -58,6 +58,33 @@ public class GeolocationAjax {
 	   		geoService.setLocation(locationBean);
 	   		geoService.serve();
 	   		session.setAttribute(LOCATION_PARAM, locationBean);
+		}
+	}
+
+	public void retrieveGeolocationFromOpenStreetMap(double latitude, double longitude, String language) throws MalformedURLException, IOException {
+		WebContext ctx = WebContextFactory.get();
+		HttpSession session = ctx.getSession();
+		String city = null;
+		String area = null;
+		String country = null;
+		if (null == session.getAttribute(LOCATION_PARAM)) {
+			String latlong = String.valueOf(latitude) + "," + String.valueOf(longitude);
+			URL url = new URL("https://nominatim.openstreetmap.org/reverse?format=json&lat=" + latitude + "&lon=" + longitude + "&zoom=18");
+			HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+			httpURLConnection.addRequestProperty("User-Agent", "Mozilla/4.76");
+			InputStream in = httpURLConnection.getInputStream();
+			String resp = IOUtils.toString(in);
+			JSONObject json = (JSONObject) JSONSerializer.toJSON(resp);
+			JSONObject address = json.getJSONObject("address");
+			city = address.getString("city");
+			country = address.getString("country");
+			area = address.getString("state");
+
+			Location locationBean = retrieveLocation(country, area, city);
+			GeolocationService geoService = SpringContext.INSTANCE.getBean("geolocationService", GeolocationService.class);
+			geoService.setLocation(locationBean);
+			geoService.serve();
+			session.setAttribute(LOCATION_PARAM, locationBean);
 		}
 	}
 	
