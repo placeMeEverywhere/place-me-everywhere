@@ -28,7 +28,8 @@
         	  callback:function(data) { 
                   var html = '<ul>';                  
                   $.each(JSON.parse(data),function(i,item) {
-                      html += '<li><img src="' + item.src + '" alt="' + item.title + '" /></li>';
+                      var result = $.base64.encode(item.src)
+                      html += '<li><img src="data:image/jpeg;base64,' + result + '" alt="' + item.title + '" /></li>';
                   });
 
                   html += '</ul>';

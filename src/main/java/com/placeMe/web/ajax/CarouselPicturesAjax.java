@@ -1,23 +1,20 @@
 package com.placeMe.web.ajax;
 
+import com.placeMe.jdbc.SpringContext;
+import com.placeMe.jdbc.dao.PicturesFromEventsDAO;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import net.sf.json.JSONSerializer;
+import org.directwebremoting.WebContext;
+import org.directwebremoting.WebContextFactory;
+
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
-
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-import net.sf.json.JSONSerializer;
-
-import org.directwebremoting.WebContext;
-import org.directwebremoting.WebContextFactory;
-
-import com.placeMe.jdbc.SpringContext;
-import com.placeMe.jdbc.dao.PicturesFromEventsDAO;
-
 public class CarouselPicturesAjax {
-	
+
 	public String getPicturesFromEvents() {
 		try {
 			WebContext ctx = WebContextFactory.get();

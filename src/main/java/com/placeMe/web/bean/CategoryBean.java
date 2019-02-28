@@ -23,8 +23,7 @@ public class CategoryBean implements Serializable {
 			categories = new ArrayList<Category>();
 			CategoryDAO cDAO = SpringContext.INSTANCE.getBean("categoryDAO", CategoryDAO.class);
 			List<Category> appo = cDAO.retrieveCategories();
-			for(int i=0; i<3; i++)
-				categories.add(appo.get(i)); 
+			categories.addAll(appo);
 		}
 		return categories;
 	}

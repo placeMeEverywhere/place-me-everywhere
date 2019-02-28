@@ -86,7 +86,7 @@ hr {
 #header-wrapper {
 	overflow: hidden;
 	/*height: 157px;*/
-	height: 15%;
+	height: 18%;
 	/*IE*/
 	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5A5A5A', endColorstr='#DADADA');
 	/*Browser WEBKIT */
@@ -172,7 +172,7 @@ hr {
 #page-wrapper {
 	overflow: hidden;
 	background: none repeat scroll 0% 0% #DADADA;
-	height: 55%;
+	height: 82%;
 }
 
 #page {
@@ -315,6 +315,7 @@ input.file {
 #footer a {
 	color: white;
 	margin-top: 2.2%;
+	height: 250px;
 }
 
 /* Three Column Footer Content */
@@ -362,7 +363,7 @@ input.file {
 
 #banner-wrapper {
 	overflow: hidden;
-	height: 345px;
+	/**height: 345px;**/
 	padding: 2.667em 0;
 	background: url(images/img03.png) repeat;
 }

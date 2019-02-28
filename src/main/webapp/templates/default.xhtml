@@ -24,6 +24,7 @@
 			<script type='text/javascript' src='/placeMe/dwr/interface/CarouselPicturesAjax.js'></script>
 			<script type='text/javascript' src='/placeMe/jq/jquery-1.8.1.min.js' />
 			<script type='text/javascript' src='/placeMe/jq/jquery.form.js' />
+			<script type='text/javascript' src='/placeMe/jq/jquery.base64.js' />
 			<script type='text/javascript' src='/placeMe/jq/jquery.jcarousel.min.js' />
 			<script type='text/javascript' src='/placeMe/jq/jcarousel-ajax.js' />
 			<script type="text/javascript">
@@ -57,16 +58,11 @@
 				   	</ui:insert>
 				   	<ui:insert name="mainBody" >
 				   		<ui:include src="fragments/main.xhtml" />
+						<ui:include src="fragments/carousel.xhtml" />
 				   	</ui:insert>				   	
 			   	</div>
 			   	<div class="clearfix"></div>
 		    </div>
-		 
-		    <div id="footer">
-		    	<ui:insert name="footer" >
-		    	  <ui:include src="fragments/footer-carousel.xhtml" />
-		    	</ui:insert>
-	    	</div>	    	
 	    </h:body>
     </f:view>
 </html>
