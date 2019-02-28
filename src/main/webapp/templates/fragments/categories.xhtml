@@ -5,6 +5,7 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:c="http://java.sun.com/jsp/jstl/core"
+	  xmlns:o="http://omnifaces.org/ui"
       >
     <f:view locale="#{language.locale}">  
     <f:loadBundle basename="com.placeMe.messages.Language" var="lang_msg"/>
@@ -19,7 +20,7 @@
 									<c:when test="${status.first}">
 										<li class="first">
 											<h:commandLink class="linkImage" action="#{language.changeLanguage}" title="${lang_msg[cat.categoryLabel]}">
-												<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
+												<o:graphicImage value="${cat.categoryImage}" title="${lang_msg[cat.categoryLabel]}" dataURI="true" />
 											</h:commandLink>
 											<p>${lang_msg[cat.categoryLabel]}</p>
 											<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>
@@ -28,7 +29,7 @@
 									<c:otherwise>
 										<li>
 											<h:commandLink class="linkImage" action="#" title="${lang_msg[cat.categoryLabel]}">
-												<h:graphicImage name="${cat.categoryImage}" library="images" title="${lang_msg[cat.categoryLabel]}" />
+												<o:graphicImage value="${cat.categoryImage}" title="${lang_msg[cat.categoryLabel]}" dataURI="true" />
 											</h:commandLink>
 											<p>${lang_msg[cat.categoryLabel]}</p>
 											<p class="posted"><h:commandLink value="#{lang_msg['label.more']}" action="#" /></p>

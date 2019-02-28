@@ -7,7 +7,7 @@ public class Category implements Serializable {
 	private static final long serialVersionUID = 7013071787608716379L;
 	private int id;	
 	private String categoryName;
-	private String categoryImage;
+	private byte[] categoryImage;
 	private String categoryLabel;
 	
 	public int getId() {
@@ -22,10 +22,10 @@ public class Category implements Serializable {
 	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
-	public String getCategoryImage() {
+	public byte[] getCategoryImage() {
 		return categoryImage;
 	}
-	public void setCategoryImage(String categoryImage) {
+	public void setCategoryImage(byte[] categoryImage) {
 		this.categoryImage = categoryImage;
 	}
 	public String getCategoryLabel() {

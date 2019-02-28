@@ -5,4 +5,8 @@
                username="${jdbc.mysql.user}" password="${jdbc.mysql.pass}" 
                driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://${jdbc.mysql.host}:${jdbc.mysql.port}/placeme"/>
+  <Resource name="BeanManager"
+            auth="Container"
+            type="javax.enterprise.inject.spi.BeanManager"
+            factory="org.jboss.weld.resources.ManagerObjectFactory" />
 </Context>

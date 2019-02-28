@@ -1,6 +1,7 @@
 package com.placeMe.web.bean;
 
 import java.io.Serializable;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -17,7 +18,7 @@ public class CategoryBean implements Serializable {
     private static final long serialVersionUID = 2756934361134603857L;
     private List<Category> categories;
 
-	public List<Category> getCategories() {
+	public List<Category> getCategories() throws SQLException {
 		if(null==categories){
 			categories = new ArrayList<Category>();
 			CategoryDAO cDAO = SpringContext.INSTANCE.getBean("categoryDAO", CategoryDAO.class);
